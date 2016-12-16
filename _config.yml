@@ -1,33 +1,22 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: 구르소 블로그
+title: Gureuso's tech blog
 email: wyun13043@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  즐겁고 멋지게 일하자!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "nicely.me" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: wyun13043
-github_username:  wyun13043
+description: >
+  즐겁게 일하자!
+baseurl: ""
+url: "nicely.me"
+timezone: Asia/Seoul
 
-# Build settings
+# build
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+exclude: ["Gemfile", "Gemfile.lock"]
 permalink: /:year/:month/:day/:title/
+
+asset_url: /assets
+keep_files: ["assets", "files"]
+
+twitter:
+  username: wyun13043
+github:
+  username:  wyun13043
