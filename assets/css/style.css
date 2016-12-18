@@ -1,37 +1,81 @@
-body {
-  background-color: #ffffff;
-}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-h1, h2, h3, h4, h5, h6 {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Nanum Gothic';
 }
 
 a, a:link, a:visited, a:active, a:hover {
   text-decoration: none;
 }
 
-#main-header {
-  height: 200px;
+h1 {
+  font-size: 40px;
+}
+
+header {
   text-align: center;
-  background-color: #FC8978;
+  height: 120px;
+  background-color: #ee8978;
+  border-bottom: 1px solid #f1f1f1;
 }
 
-#main-title {
-  padding: 55px 0;
+header > section {
+  margin: auto;
+  width: 900px;
 }
 
-#main-nav {
+header > section > a {
+  text-align: center;
+  border-bottom: none;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  margin-top: 35px;
 }
 
-#main-nav > ul {
-  padding: 0;
-  list-style-type: none;
+header > section > a, header > section > div {
+  float: left;
 }
 
-#main-nav > ul > li {
-  display: inline;
-  padding: 20px 50px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  font-size: 20px;
+header > section > div {
+  height: 120px;
+  width: calc(100% - 80px);
+  width: -o-calc(100% - 80px);
+  width: -ms-calc(100% - 80px);
+  width: -moz-calc(100% - 80px);
+  width: -webkit-calc(100% - 80px);
 }
+
+.main-title {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.main-title > div {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.main-title > div > h1 {
+  color: #ffffff;
+}
+
+.main-title > div > span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
