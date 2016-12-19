@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+/* common */
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,7 @@ h1 {
   font-size: 40px;
 }
 
+/* header */
 header {
   text-align: center;
   height: 120px;
@@ -28,20 +30,12 @@ header {
 
 header > section {
   margin: auto;
-  width: 900px;
 }
 
 header > section > a {
-  text-align: center;
-  border-bottom: none;
   color: #ffffff;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   margin-top: 35px;
 }
 
@@ -65,7 +59,6 @@ header > section > div {
 }
 
 .main-title > div {
-  text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
@@ -79,3 +72,26 @@ header > section > div {
   font-size: 14px;
 }
 
+/* main */
+main {
+  padding: 30px 0;
+}
+
+/* responsive */
+@media all and (max-width: 990px){
+  header > section {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 990px){
+  header > section {
+    width: 900px;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .main-title > div > h1 {
+    font-size: 24px;
+  }
+}
