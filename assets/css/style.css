@@ -208,4 +208,12 @@ footer > section {
   .header-title > div > h1 {
     font-size: 24px;
   }
+
+  .main-title > span {
+    font-size: 24px;
+  }
+
+  .footer-link > span, .footer-top > span {
+    font-size: 18px;
+  }
 }
