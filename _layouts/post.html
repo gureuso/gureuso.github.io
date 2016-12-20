@@ -1,4 +1,17 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="main-post">
+  <h1>
+    {{ page.title }}
+  </h1>
+  <span>{{ page.date | date: '%Y-%m-%d %H:%M' }}</span>
+  <p>
+    {{ content }}
+  </p>
+  <ul>
+    {% for tag in page.tags %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+</div>

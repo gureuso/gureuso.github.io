@@ -107,31 +107,36 @@ main > section {
   font-weight: bold;
 }
 
-.main-post-item {
+.main-post {
   margin-top: 20px;
   border-bottom: 2px solid #eaeaea;
 }
 
-.main-post-item > h2 > a {
+.main-post > h2 > a {
   color: #282d31;
 }
 
-.main-post-item > h2 > a:hover {
+.main-post > h2 > a:hover {
   color: #444;
   border-bottom: 1px solid;
 }
 
-.main-post-item > p {
+.main-post > span {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.main-post > p {
   margin: 20px 0;
 }
 
-.main-post-item > ul {
+.main-post > ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.main-post-item > ul > li {
+.main-post > ul > li {
   display: inline-block;
   padding: 5px 20px;
   background-color: #eaeaea;

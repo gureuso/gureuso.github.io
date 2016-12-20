@@ -1,9 +1,7 @@
 ---
 layout: home
 ---
-<div class="main-post-item">
-  {% for post in site.posts %}
-    {% include item.html %}
-  {% endfor %}
-</div>
+{% for post in site.posts %}
+  {% include item.html %}
+{% endfor %}
 {% include pagination.html %}
