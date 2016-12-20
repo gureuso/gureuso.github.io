@@ -3,11 +3,13 @@
   <head>
     {% include head.html %}
   </head>
-  <body>
+  <body name="top">
     {% include header.html %}
 
     <main>
-      {{ content }}
+      <section>
+        {{ content }}
+      </section>
     </main>
 
     {% include footer.html %}
