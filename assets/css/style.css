@@ -27,20 +27,9 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-p {
-  font-size: 20px;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
 .title {
   margin: 0;
+  font-size: 40px;
 }
 
 /* header */
@@ -128,7 +117,6 @@ main > section {
 
 .main-post > span {
   color: #aaa;
-  font-size: 18px;
 }
 
 .main-post > p {
@@ -139,6 +127,10 @@ main > section {
   margin: 14px 0;
   padding: 14px;
   border-left: 4px solid #ee8978;
+}
+
+.main-post > blockquote > p {
+  margin: 0;
 }
 
 .main-post-tag {
@@ -213,7 +205,7 @@ footer > section {
 }
 
 @media all and (max-width: 660px) {
-  .header-title > div > h1 {
+  .title {
     font-size: 24px;
   }
 
