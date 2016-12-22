@@ -7,7 +7,7 @@
   <p>
     {{ post.excerpt | strip_html | truncatewords: 75 }}
   </p>
-  <ul>
+  <ul class="main-post-tag">
     {% for tag in post.tags %}
       <li>{{ tag }}</li>
     {% endfor %}

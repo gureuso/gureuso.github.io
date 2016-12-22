@@ -2,8 +2,6 @@
 
 /* common */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -11,6 +9,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: #444;
 }
 
@@ -19,7 +19,12 @@ i {
 }
 
 a, a:link, a:visited, a:active, a:hover {
+  color: #ee8978;
   text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid;
 }
 
 p {
@@ -32,6 +37,10 @@ h1 {
 
 h2 {
   font-size: 30px;
+}
+
+.title {
+  margin: 0;
 }
 
 /* header */
@@ -82,9 +91,6 @@ header > section > div {
   vertical-align: middle;
 }
 
-.header-title > div > h1 {
-}
-
 .header-title > div > span {
   font-size: 14px;
 }
@@ -120,27 +126,28 @@ main > section {
   color: #ee8978;
 }
 
-.main-post > h2 > a:hover {
-  color: #444;
-  border-bottom: 1px solid;
-}
-
 .main-post > span {
   color: #aaa;
   font-size: 18px;
 }
 
 .main-post > p {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
-.main-post > ul {
+.main-post > blockquote {
+  margin: 14px 0;
+  padding: 14px;
+  border-left: 4px solid #ee8978;
+}
+
+.main-post-tag {
   list-style: none;
-  margin: 0;
+  margin: 15px 0 15px 0;
   padding: 0;
 }
 
-.main-post > ul > li {
+.main-post-tag > li {
   display: inline-block;
   padding: 5px 20px;
   background-color: #eaeaea;
