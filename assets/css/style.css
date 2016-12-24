@@ -5,7 +5,7 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: 'Nanum Gothic', serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 body {
