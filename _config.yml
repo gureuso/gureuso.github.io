@@ -16,7 +16,5 @@ permalink: /:year/:month/:day/:title/
 asset_url: /assets
 keep_files: ["assets", "files"]
 
-twitter:
-  username: wyun13043
 github:
-  username:  wyun13043
+  username:  gureuso
