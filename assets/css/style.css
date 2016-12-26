@@ -19,7 +19,7 @@ i {
 }
 
 a, a:link, a:visited, a:active, a:hover {
-  color: #ee8978;
+  color: #db8c88;
   text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ a:hover {
 header {
   text-align: center;
   height: 120px;
-  background-color: #ee8978;
+  background-color: #db8c88;
   border-bottom: 1px solid #f1f1f1;
   color: #ffffff;
 }
@@ -112,7 +112,7 @@ main > section {
 }
 
 .main-post > h2 > a {
-  color: #ee8978;
+  color: #db8c88;
 }
 
 .main-post > span {
@@ -126,7 +126,7 @@ main > section {
 .main-post > blockquote {
   margin: 14px 0;
   padding: 14px;
-  border-left: 4px solid #ee8978;
+  border-left: 4px solid #db8c88;
 }
 
 .main-post > blockquote > p {
