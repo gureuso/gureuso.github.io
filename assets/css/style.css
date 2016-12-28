@@ -14,6 +14,10 @@ body {
   background-color: #444;
 }
 
+p {
+  line-height: 30px;
+}
+
 i {
   color: #ffffff;
 }
@@ -111,6 +115,10 @@ main > section {
   border-bottom: 2px solid #eaeaea;
 }
 
+.main-post > .title {
+  margin-bottom: 10px;
+}
+
 .main-post > h2 > a {
   color: #db8c88;
 }
@@ -131,6 +139,13 @@ main > section {
 
 .main-post > blockquote > p {
   margin: 0;
+}
+
+.main-post > p > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
 }
 
 .main-post-tag {
