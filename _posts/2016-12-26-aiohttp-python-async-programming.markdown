@@ -10,7 +10,7 @@ tags: ["python", "async", "aiohttp", "gunicorn"]
 
 # 문제발생
 
-![01](/assets/images/aiohttp-python-async-programming-01.jpg)
+![aiohttp-python-async-programming-01](/assets/images/aiohttp-python-async-programming-01.jpg)
 
 싱글 페이지 웹에서 동시에 다중 API 요청 시 CAUTION: Provisional headers are shown. 에러가 발생하고 나머지 requests를 요청하지 않는 문제가 발생했습니다.
 
@@ -72,7 +72,7 @@ def setupRoutes(app):
 
 결국 프레임워크를 바꾸게 되었고 aiohttp server 기능을 활용해 API를 작성하게 되었습니다.
 
-![02](/assets/images/aiohttp-python-async-programming-02.jpg)
+![aiohttp-python-async-programming-02](/assets/images/aiohttp-python-async-programming-02.jpg)
 
 request 요청시 start와 end를 출력하게 했는데, 3개의 request를 동시에 받아 처리했고, 발생한 문제도 더 이상 나타나지 않았습니다.
 
