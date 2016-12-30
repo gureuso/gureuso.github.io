@@ -74,7 +74,7 @@ def setupRoutes(app):
 
 ![02](/assets/images/aiohttp-python-async-programming-02.jpg)
 
-request 요청시 start와 end를 출력하게 했는데, 3개의 request를 잘받고 처리했고, 발생한 문제도 더 이상 나타나지 않았습니다.
+request 요청시 start와 end를 출력하게 했는데, 3개의 request를 동시에 받아 처리했고, 발생한 문제도 더 이상 나타나지 않았습니다.
 
 # 다른 방법? - gunicorn
 
