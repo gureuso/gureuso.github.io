@@ -74,7 +74,7 @@ def setupRoutes(app):
 
 결국 프레임워크를 바꾸게 되었고 aiohttp server 기능을 활용해 API를 작성하게 되었습니다.
 
-![aiohttp-python-async-programming-02](/assets/images/aiohttp-python-async-programming-02.jpg)
+![aiohttp-python-async-programming-02](/assets/images/aiohttp-python-async-programming-02.jpg){:width="400px"}
 
 request 요청시 start와 end를 출력하게 했는데, 3개의 request를 동시에 받아 처리했고, 발생한 문제도 더 이상 나타나지 않았습니다.
 
