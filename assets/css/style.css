@@ -123,6 +123,14 @@ main > section {
   margin-bottom: 10px;
 }
 
+.main-post > ul > li:last-child {
+  padding-bottom: 0;
+}
+
+.main-post > ul > li {
+  padding-bottom: 10px;
+}
+
 .main-post > h2 > a {
   color: #ee8978;
 }
