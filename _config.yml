@@ -6,15 +6,17 @@ baseurl: ""
 url: "http://tech.gureuso.me"
 timezone: Asia/Seoul
 
-# build
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-paginate
 exclude: ["Gemfile", "Gemfile.lock"]
-permalink: /:year/:month/:day/:title/
 
 asset_url: /assets
 keep_files: ["assets", "files"]
 
 github:
   username:  gureuso
+
+paginate: 5
+paginate_path: "/pages/:num/"

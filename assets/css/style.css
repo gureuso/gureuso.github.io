@@ -175,13 +175,13 @@ main > section {
   margin-top: 5px;
 }
 
-#main-post-links {
+.main-post-links {
   display: table;
   padding: 0;
   width: 100%;
 }
 
-#main-post-prev, #main-post-next {
+.main-post-links-prev, .main-post-links-next {
   display: table-cell;
   width: 50%;
   height: 60px;
@@ -189,6 +189,10 @@ main > section {
   vertical-align: middle;
   text-align: center;
   padding: 10px 5px;
+}
+
+#main-post-pagination {
+  padding: 10px 0 0 0;
 }
 
 /* footer */
