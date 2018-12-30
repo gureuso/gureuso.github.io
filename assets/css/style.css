@@ -181,6 +181,10 @@ main > section {
   width: 100%;
 }
 
+.main-post-links > a:hover {
+  font-weight: bold;
+}
+
 .main-post-links-prev, .main-post-links-next {
   display: table-cell;
   width: 50%;
