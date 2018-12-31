@@ -160,6 +160,7 @@ a:hover {
 .main-post-links {
   padding: 0;
   width: 100%;
+  display: table;
 }
 
 .main-post-links > a:hover {
