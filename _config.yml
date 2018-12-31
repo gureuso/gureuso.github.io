@@ -17,5 +17,5 @@ keep_files: ["assets", "files"]
 github:
   username:  gureuso
 
-paginate: 2
+paginate: 5
 paginate_path: "/pages/:num/"
