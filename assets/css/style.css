@@ -235,6 +235,10 @@ a:hover {
 }
 
 @media all and (max-width: 660px) {
+  #main {
+    padding: 20px 0;
+  }
+
   #header-title {
     margin-top: 35px;
   }
