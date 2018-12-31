@@ -1,8 +1,8 @@
 <div class="main-post-links">
   {% if page.previous.url %}
-  <a href="{{ page.previous.url }}" class="main-post-links-prev">&lt {{ page.previous.title }}</a>
+  <a href="{{ page.previous.url }}" class="main-post-links-prev link">&lt {{ page.previous.title }}</a>
   {% endif %}
   {% if page.next.url %}
-  <a href="{{ page.next.url }}" class="main-post-links-next">{{ page.next.title }} &gt</a>
+  <a href="{{ page.next.url }}" class="main-post-links-next link">{{ page.next.title }} &gt</a>
   {% endif %}
 </div>

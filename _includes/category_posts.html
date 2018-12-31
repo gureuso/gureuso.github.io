@@ -1,0 +1,19 @@
+<h2>카테고리관련글</h2>
+{% if page.category == "programming" %}
+  {% for category_post in site.categories.programming limit:5 %}
+    {% if category_post.url != page.url %}
+      <div class="main-post-category-posts">
+        <a href="{{ category_post.url }}" class="link">{{ category_post.title }}</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+{% elsif page.category == "server" %}
+  {% for category_post in site.categories.server limit:5 %}
+    {% if category_post.url != page.url %}
+      <div class="main-post-category-posts">
+        <a href="{{ category_post.url }}" class="link">{{ category_post.title }}</a>
+       </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}

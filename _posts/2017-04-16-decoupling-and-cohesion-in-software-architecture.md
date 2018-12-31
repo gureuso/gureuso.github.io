@@ -4,7 +4,7 @@ title: "Decoupling and Cohesion in software architecture"
 date: 2017-04-16 15:10:30 +0900
 written_by: "구르소"
 description: "사수께서 decoupling과 cohesion을 아냐고 질문하셨을 때 대답할 수 없었다. 그래서 오늘은 내가 이해하려고 했던 decoupling and cohesion in software architecture에 대해 글을 쓰려고 한다."
-categories: programming
+category: "programming"
 tags: ["decoupling", "cohesion"]
 comments: true
 ---

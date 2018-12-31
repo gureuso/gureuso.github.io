@@ -5,18 +5,17 @@ description: >
 baseurl: ""
 url: "https://gureuso.github.io"
 timezone: Asia/Seoul
-
+permalink: /:categories/:title/
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
 exclude: ["Gemfile", "Gemfile.lock"]
-
 asset_url: /assets
 keep_files: ["assets", "files"]
 
 github:
   username:  gureuso
 
-paginate: 5
+paginate: 2
 paginate_path: "/pages/:num/"

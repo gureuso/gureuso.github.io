@@ -39,6 +39,10 @@ a:hover {
   margin: auto;
 }
 
+.link:hover {
+  font-weight: bold;
+}
+
 /* header */
 #header {
   text-align: center;
@@ -163,10 +167,6 @@ a:hover {
   display: table;
 }
 
-.main-post-links > a:hover {
-  font-weight: bold;
-}
-
 .main-post-links-prev, .main-post-links-next {
   display: table-cell;
   width: 50%;
@@ -179,6 +179,11 @@ a:hover {
 
 #main-post-pagination {
   padding: 10px 0 0 0;
+}
+
+.main-post-category-posts {
+  font-size: 20px;
+  margin: 10px 5px;
 }
 
 /* footer */

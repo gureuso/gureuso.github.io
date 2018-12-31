@@ -4,7 +4,7 @@ title: "사진 공유 SNS 서버 개발하기 part 2"
 date: 2017-02-19 22:30:30 +0900
 written_by: "구르소"
 description: "저번시간에는 기본 스택 구성과 프레임워크 세팅까지 설명했다. 오늘은 이번 프로젝트의 핵심인 AWS로 인프라 구축하기에 대해 써보려고 한다."
-categories: server
+category: "server"
 tags: ["aws", "sns", "api"]
 comments: true
 ---

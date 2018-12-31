@@ -6,7 +6,7 @@ written_by: "구르소"
 description: "배달의 민족에서 치킨천마리 이벤트를 진행했다. 댓글에 학교명을 입력해 가장 많이 참여한 학생들의 학교에 치킨을 제공하는 거였다. 
 참여를 부탁하는 글을 보고 참여를 했는데 누군가 파싱 사이트를 만들어 놨었다. 파싱을 종종 했었지만 페이스북 댓글은 해본적이 없어 만들면서 삽질한 
 이야기를 해보려고 한다."
-categories: programming
+category: "programming"
 tags: ["python", "facebook", "parsing"]
 comments: true
 ---
