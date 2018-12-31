@@ -35,13 +35,12 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-.title {
-  margin: 0;
-  font-size: 40px;
+.response-width {
+  margin: auto;
 }
 
 /* header */
-header {
+#header {
   text-align: center;
   height: 120px;
   background-color: #ee8978;
@@ -49,11 +48,7 @@ header {
   color: #ffffff;
 }
 
-header > section {
-  margin: auto;
-}
-
-header > section > a {
+.header-icon {
   color: #ffffff;
   width: 40px;
   height: 40px;
@@ -62,101 +57,88 @@ header > section > a {
   -webkit-border-radius: 50%;
 }
 
-header > section > a:hover {
+.header-icon:hover {
   background-color: #444;
 }
 
-header > section > a, header > section > div {
+.header-icon, #header-title {
   float: left;
 }
 
-header > section > div {
+#header-title {
   height: 120px;
   width: calc(100% - 80px);
   width: -moz-calc(100% - 80px);
   width: -webkit-calc(100% - 80px);
+  margin-top: 30px;
 }
 
-.header-title {
-  width: 100%;
-  height: 100%;
-  display: table;
+#header-title > h1 {
+  margin: 0;
+  font-size: 40px;
 }
 
-.header-title > div {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.header-title > div > span {
+#header-title > span {
   font-size: 14px;
 }
 
 /* main */
-main {
+#main {
   padding: 30px 0;
   background-color: #ffffff;
 }
 
-main > section {
-  margin: auto;
-}
-
-.main-title {
+#main-title {
   height: 100px;
   line-height: 100px;
   background-color: #eaeaea;
   text-align: center;
 }
 
-.main-title > span {
+#main-title > span {
   font-size: 30px;
   font-weight: bold;
 }
 
-.main-post {
+#main-post {
   margin-top: 20px;
   border-bottom: 2px solid #eaeaea;
 }
 
-.main-post > .title {
+#main-post > h1 {
   margin-bottom: 10px;
 }
 
-.main-post > ul > li:last-child {
-  padding-bottom: 0;
-}
-
-.main-post > ul > li {
+#main-post > ul > li, #main-post > ul > li:last-child {
   padding-bottom: 10px;
 }
 
-.main-post > h2 > a {
+#main-post > h2 > a {
   color: #ee8978;
 }
 
-.main-post > span {
+#main-post > span {
   color: #aaa;
 }
 
-.main-post > blockquote {
+#main-post > blockquote {
   margin: 10px 0;
   padding: 10px 20px;
   border-left: 4px solid #ee8978;
 }
 
-.main-post > blockquote > p {
+#main-post > blockquote > p {
   margin: 0;
 }
 
-.main-post > p > img {
+#main-post > p > img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
 }
 
-.main-post > p > code {
+#main-post > p > code {
   padding: 2px 4px;
   background-color: #eaeaea;
   font-size: 90%;
@@ -200,17 +182,13 @@ main > section {
 }
 
 /* footer */
-footer {
+#footer {
   background-color: #444;
   color: #ffffff;
   padding: 80px 0;
 }
 
-footer > section {
-  margin: auto;
-}
-
-footer a {
+#footer a {
     font-size: 24px;
 }
 
@@ -222,10 +200,6 @@ footer a {
   line-height: 60px;
   background-color: #333;
   margin-top: 20px;
-}
-
-section > .footer-box {
-  margin-top: 0;
 }
 
 .footer-link {
@@ -249,23 +223,31 @@ section > .footer-box {
 
 /* responsive */
 @media all and (max-width: 880px){
-  header > section, main > section, footer > section {
+  .response-width {
     width: 90%;
   }
 }
 
 @media all and (min-width: 880px){
-  header > section, main > section, footer > section {
+  .response-width {
     width: 800px;
   }
 }
 
 @media all and (max-width: 660px) {
-  .title {
-    font-size: 24px;
+  #header-title {
+    margin-top: 35px;
   }
 
-  .main-title > span {
+  #header-title > h1 {
+    font-size: 30px;
+  }
+
+  #header-title > span {
+    font-size: 12px;
+  }
+
+  #main-title > span {
     font-size: 24px;
   }
 

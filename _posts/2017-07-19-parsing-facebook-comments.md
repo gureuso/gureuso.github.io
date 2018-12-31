@@ -2,11 +2,12 @@
 layout: post
 title: "페이스북 댓글 파싱하기"
 date: 2017-07-20 02:30:30 +0900
+written_by: "구르소"
 description: "배달의 민족에서 치킨천마리 이벤트를 진행했다. 댓글에 학교명을 입력해 가장 많이 참여한 학생들의 학교에 치킨을 제공하는 거였다. 
 참여를 부탁하는 글을 보고 참여를 했는데 누군가 파싱 사이트를 만들어 놨었다. 파싱을 종종 했었지만 페이스북 댓글은 해본적이 없어 만들면서 삽질한 
 이야기를 해보려고 한다."
-categories: blog
-tags: ["facebook", "parsing"]
+categories: programming
+tags: ["python", "facebook", "parsing"]
 comments: true
 ---
 
@@ -56,7 +57,7 @@ API가 있었다.
       "before": "NDE4OTMZD",
       "after": "NDE4NjkZD"
     },
-    "next": "https://graph.facebook.com/v2.10/1474971405859499/comments?access_token=693206067544228%7CPMj0foN959KWhvrq285fuqOMTPU&pretty=0&limit=25&after=NDE4NjkZD"
+    "next": "https://graph.facebook.com/v2.10/1474971405859499/comments?access_token=Mj0foN959KWhvrq285fuqOMTPU&pretty=0&limit=25&after=NDE4NjkZD"
   }
 }
 ```
