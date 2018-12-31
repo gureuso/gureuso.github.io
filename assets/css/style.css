@@ -181,6 +181,10 @@ a:hover {
   padding: 10px 0 0 0;
 }
 
+#main-post-category-posts-title {
+  margin-top: 10px;
+}
+
 .main-post-category-posts {
   font-size: 20px;
   margin: 10px 5px;

@@ -1,6 +1,6 @@
 {% if page.categories.first == "programming" %}
   {% if site.categories.programming.size > 1 %}
-    <h2>더보기</h2>
+    <h2 id="main-post-category-posts-title">더보기</h2>
   {% endif %}
   {% for category_post in site.categories.programming limit:5 %}
     {% if category_post.url != page.url %}
@@ -12,7 +12,7 @@
 
 {% elsif page.categories.first == "server" %}
   {% if site.categories.server.size > 1 %}
-    <h2>더보기</h2>
+    <h2 id="main-post-category-posts-title">더보기</h2>
   {% endif %}
   {% for category_post in site.categories.server limit:5 %}
     {% if category_post.url != page.url %}
@@ -24,7 +24,7 @@
 
 {% elsif page.categories.first == "database" %}
   {% if site.categories.database.size > 1 %}
-    <h2>더보기</h2>
+    <h2 id="main-post-category-posts-title">더보기</h2>
   {% endif %}
   {% for category_post in site.categories.database limit:5 %}
     {% if category_post.url != page.url %}
@@ -34,7 +34,7 @@
     {% endif %}
   {% endfor %}
 {% else %}
-  <h2>더보기</h2>
+  <h2 id="main-post-category-posts-title">더보기</h2>
   {% for related_post in site.related_posts limit:5 %}
     {% if related_post.url != page.url %}
       <div class="main-post-category-posts">
