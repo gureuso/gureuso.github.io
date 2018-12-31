@@ -124,7 +124,7 @@ if self.alreadyCheckCommentIds.get(commentId):
 
 # 대댓글 체크하기
 
-> GET /v2.10/{object-id}/comments?access_token=access_token&fields=id,from,message,comments{id,from,message,comments} HTTP/1.1
+> GET /v2.10/{object-id}/comments?fields=comments{id,from,message,comments} HTTP/1.1
 >
 > Host: graph.facebook.com
 
