@@ -96,7 +96,7 @@ file open을 피하고 싶었지만 이렇게 하지 않으면 이상하게 제�
 
 ## 인프라 구성
 
-![implement-sns-server-for-sharing-photo-part-2-01](/assets/images/implement-sns-server-for-sharing-photo-part-2-01.jpg){:width="500px"}
+![implement-sns-server-for-sharing-photo-part-2-01](/assets/images/implement-sns-server-for-sharing-photo-part-2/01.jpg){:width="500px"}
 
 뭐 우여곡절 끝에 다음과 같은 인프라를 구성할 수 있었다. 로드밸런싱은 ELB를 사용해 부하 분산을 구현했고, MongoDB는 ReplicaSet을 설정해 부하 분산을 구현했다.
 

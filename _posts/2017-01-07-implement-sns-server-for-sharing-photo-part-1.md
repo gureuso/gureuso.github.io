@@ -44,7 +44,7 @@ RabbitMQ, Celery는 도입할 생각이 없었는데 업로드 시스템 성능 
 
 ## URL 리소스 접근 구조와 디렉토리 구조를 일치
 
-![implement-sns-server-for-sharing-photo-part-1-01](/assets/images/implement-sns-server-for-sharing-photo-part-1-01.jpg){:width="400px"}
+![implement-sns-server-for-sharing-photo-part-1-01](/assets/images/implement-sns-server-for-sharing-photo-part-1/01.jpg){:width="400px"}
 
 Flask는 구조에 대한 가이드 라인조차 없어서 매우 프리하다. 그래서 소스가 스파게티가 될수 있어서 조심해야한다. 이번 프로젝트는 MVC 패턴을 구현해보고 싶어서 최대한 비슷하게 구조를 짜봤다. apps 디렉토리가 API가 들어가는 메인 디렉토리이고 리소스 접근 방식과 동일하게 구조를 짰다.
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(sys.argv[1]) if len(sys.argv) > 1 else 7777, debug=True)
 ```
 
-![implement-sns-server-for-sharing-photo-part-1-02](/assets/images/implement-sns-server-for-sharing-photo-part-1-02.jpg)
+![implement-sns-server-for-sharing-photo-part-1-02](/assets/images/implement-sns-server-for-sharing-photo-part-1/02.jpg)
 
 port를 사용해 개인 환경에서 개발을 할수 있게 했고, Web server 위에서 구동될 때 index.wsgi를 따로 만들 필요없이 한 번에 컨트롤 가능하게 만들었다.
 

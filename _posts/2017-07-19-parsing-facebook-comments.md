@@ -14,7 +14,7 @@ comments: true
 배달의 민족에서 치킨천마리 이벤트를 진행했다. 댓글에 학교명을 입력해 가장 많이 참여한 학생들의 학교에 치킨을 제공하는 거였다. 참여를 부탁하는 글을 보고 참여를 
 했는데 누군가 파싱 사이트를 만들어 놨었다. 파싱을 종종 했었지만 페이스북 댓글은 해본적이 없어 만들면서 삽질한 이야기를 해보려고 한다.
 
-![parsing-facebook-comments-01](/assets/images/parsing-facebook-comments-01.jpg)
+![parsing-facebook-comments-01](/assets/images/parsing-facebook-comments/01.jpg)
 
 참여 기준은 다음과 같고 어떤 기준으로 코드를 작성할지 생각해봤다.
 
@@ -69,7 +69,7 @@ data 루프를 돌면서 comment를 가져와 파싱하고 루프가 끝나면 n
 문제는 message였다. 참여 조건을 만족하려면 지역명과 학교명이 필요했는데 `서울, ㅇㅇ고등학교`, `서울특별시, ㅇㅇ고등학교`처럼 지역명이 다양하게 
 사용되고 있었다. 결국 다른 사이트에서 파싱한 방법과 동일한 `, 학교명`을 기준으로 파싱하게 되었다.
 
-![parsing-facebook-comments-01](/assets/images/parsing-facebook-comments-02.jpg){:width="600px"}
+![parsing-facebook-comments-01](/assets/images/parsing-facebook-comments/02.jpg){:width="600px"}
 
 학교명 리스트는 [학교 알리미](http://www.schoolinfo.go.kr/ng/pnnggo_a01_l0.do){:target="_blank"} 공개용 데이터 카테고리에서 엑셀로 얻을 수 있었다.
 
