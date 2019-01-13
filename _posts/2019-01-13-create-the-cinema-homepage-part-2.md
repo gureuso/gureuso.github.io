@@ -59,7 +59,7 @@ Docker만의 명령어와 쉘 스크립트를 지원하면서 직관적인 패�
 
 ## Docker autobuild
 
-![create-the-cinema-homepage-part-2-01](/assets/images/create-the-cinema-homepage-part-2-01.png)
+![create-the-cinema-homepage-part-2-01](/assets/images/create-the-cinema-homepage-part-2/01.png)
 
 또한 깃허브 webhook을 이용해 이벤트 발생시 자동으로 빌드해주는 옵션은 매번 이미지를 수동으로 빌드해줘야 하는 불편함을 해소시켜줬다.
 
@@ -71,7 +71,7 @@ $ docker run -d --net mybridge --name db redis
 $ docker run -d --net mybridge -e DB=db -p 8000:5000 --name web chrch/web
 ```
 
-![create-the-cinema-homepage-part-2-02](/assets/images/create-the-cinema-homepage-part-2-02.png)
+![create-the-cinema-homepage-part-2-02](/assets/images/create-the-cinema-homepage-part-2/02.png)
 
 https://blog.docker.com/2016/12/understanding-docker-networking-drivers-use-cases/
 
@@ -109,7 +109,7 @@ Docker는 컨테이너 끼리의 통신을 network 명령어로 풀어냈다. �
 
 dockerrun.aws.json을 작성하게 되면 Docker Hub에 빌드된 이미지를 AWS EB에서 사용할 수 있게 된다.
 
-![create-the-cinema-homepage-part-2-03](/assets/images/create-the-cinema-homepage-part-2-03.png)
+![create-the-cinema-homepage-part-2-03](/assets/images/create-the-cinema-homepage-part-2/03.png)
 
 그럼 결국 위와 같은 구조가 나온다. git에 커밋을 하게되면 docker 이미지가 자동으로 빌드되고, AWS EB는 Docker Hub에 이미지를 로딩해 배포를 한다.
 
