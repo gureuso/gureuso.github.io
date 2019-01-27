@@ -2,18 +2,14 @@
 <html lang="ko">
   <head>
     {% include head.html %}
+    {% include google_analytics.html %}
   </head>
   <body name="top">
-    {% include google_analytics.html %}
-
-    {% include header.html %}
-
-    <div id="main">
-      <div class="response-width">
+    <div id="container">
+      {% include sidebar.html %}
+      <div id="main">
         {{ content }}
       </div>
     </div>
-
-    {% include footer.html %}
   </body>
 </html>
