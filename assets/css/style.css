@@ -182,16 +182,15 @@ a:hover {
   }
 
   #sidebar {
-    position: fixed;
     min-width: 100%;
   }
 
-  #sidebar-profile {
-    display: none;
+  #sidebar-icon {
+    margin-bottom: 15px;
   }
 
   #main {
-    padding: 40px 20px 20px;
+    padding: 10px 20px;
   }
 
   #main-title > h1 {
