@@ -35,10 +35,6 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-.link:hover {
-  font-weight: bold;
-}
-
 #container {
   display: flex;
   min-height: 100vh;
@@ -150,31 +146,41 @@ a:hover {
   margin-top: 5px;
 }
 
-.main-post-links {
+.main-links {
+  display: table;
   padding: 0;
   width: 100%;
-  display: table;
 }
 
-.main-post-links-prev, .main-post-links-next {
+.main-links-prev, .main-links-next {
   display: table-cell;
   width: 50%;
-  height: 60px;
   font-size: 20px;
-  vertical-align: middle;
   text-align: center;
-  padding: 10px 5px;
+  padding: 15px 5px;
+  vertical-align: middle;
+  border-bottom: 1px solid white;
 }
 
-#main-post-pagination {
-  padding: 10px 0 0 0;
+.main-links-prev:hover, .main-links-next:hover {
+  border-bottom: 1px solid;
+  color: #ee8978;
+  cursor: pointer;
 }
 
-#main-post-category-posts-title {
+.main-links-prev > a:hover, .main-links-next > a:hover {
+  border-bottom: none;
+}
+
+#main-pagination {
+  padding-top: 10px;
+}
+
+#category-posts-title {
   margin-top: 10px;
 }
 
-.main-post-category-posts {
+.category-posts {
   font-size: 20px;
   margin: 10px 5px;
 }
@@ -201,8 +207,8 @@ a:hover {
     font-size: 24px;
   }
 
-  #main-post-prev, #main-post-next {
-    display: inline-block;
+  #main-post-pagination-prev, #main-post-pagination-next {
+    display: table-caption;
     width: 100%;
   }
 }
