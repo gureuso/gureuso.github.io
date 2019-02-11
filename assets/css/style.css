@@ -207,6 +207,10 @@ a:hover {
     font-size: 24px;
   }
 
+  #main-post > p > img {
+    max-width: 100%;
+  }
+
   #main-post-pagination-prev, #main-post-pagination-next {
     display: table-caption;
     width: 100%;
