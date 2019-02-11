@@ -3,7 +3,6 @@ layout: post
 title: "영화 예매 사이트 개발하기 part 2"
 date: 2019-01-13 13:41:30 +0900
 written_by: "구르소"
-description: "오랜만에 AWS EC2를 설치하고 영화 예매 사이트 배포를 위해서 패키지들을 설치하던 중 알수 없는 에러가 났다. aws가 amazon linux 2로 업그레이드 하면서 기존 방식으로는 설치가 되지 않았던 것이다. 결국 ubuntu에 설치를 해서 해결할 수 있었지만 너무 오래 걸렸다. 일관된 환경에서 배포를 하고싶은 마음이 생기게 된 계기였다. 이번 포스트에서는 일관된 환경을 제공하는 Docker와 배포를 쉽게 도와주는 aws Elastic beanstalk를 소개하려고 한다."
 categories: ["server"]
 tags: ["aws", "elastic beanstalk", "docker"]
 comments: true

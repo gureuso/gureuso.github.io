@@ -3,7 +3,6 @@ layout: post
 title: "aiohttp를 활용한 파이썬 비동기 프로그래밍"
 date: 2016-12-26 11:51:30 +0900
 written_by: "구르소"
-description: "안녕하세요. 서버 개발자 윤정현입니다. 싱글 페이지 웹에서 동시에 다중 API 요청 시 block이 걸리는 문제를 경험하게 되었는데, 비동기 프로그래밍으로 해결한 경험을 공유하고 싶어 글을 쓰게 되었습니다."
 categories: ["programming"]
 tags: ["python", "aiohttp", "gunicorn"]
 comments: true

@@ -3,7 +3,6 @@ layout: post
 title: "사진 공유 SNS 서버 개발하기 part 1"
 date: 2017-01-05 16:30:30 +0900
 written_by: "구르소"
-description: "사진 공유 SNS 서버를 혼자 개발하게 됐다. 사실 잘해서 혼자 개발한건 아니고 나밖에 할 사람이 없었다."
 categories: ["server"]
 tags: ["python", "sns"]
 comments: true
