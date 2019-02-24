@@ -185,6 +185,12 @@ a:hover {
   margin: 10px 5px;
 }
 
+#copyright {
+  text-align: right;
+  color: #adb5bd;
+  margin-top: 10px;
+}
+
 /* responsive */
 @media all and (max-width: 800px) {
   #container {
