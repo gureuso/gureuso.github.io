@@ -3,7 +3,7 @@ email: wyun13043@gmail.com
 description: >
   If really love what you do, then the rest follows
 baseurl: ""
-url: "https://gureuso.github.io"
+url: "https://tech.gureuso.me"
 timezone: Asia/Seoul
 permalink: /:categories/:title/
 markdown: kramdown
