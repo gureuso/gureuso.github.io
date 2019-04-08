@@ -3,7 +3,7 @@ layout: post
 title: "영화 예매 사이트 개발하기 part 2"
 date: 2019-01-13 13:41:30 +0900
 written_by: "구르소"
-categories: ["server"]
+categories: ["project"]
 tags: ["aws", "elastic beanstalk", "docker"]
 comments: true
 ---

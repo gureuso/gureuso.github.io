@@ -3,7 +3,7 @@ layout: post
 title: "사진 공유 SNS 서버 개발하기 part 1"
 date: 2017-01-05 16:30:30 +0900
 written_by: "구르소"
-categories: ["server"]
+categories: ["project"]
 tags: ["python", "sns"]
 comments: true
 ---
