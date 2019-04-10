@@ -4,7 +4,7 @@ title: "턴더페 프로젝트 part 3"
 date: 2019-04-10 17:22:30 +0900
 written_by: "구르소"
 categories: ["project"]
-tags: ["aws"]
+tags: ["aws", "elb", "docker"]
 comments: true
 ---
 
