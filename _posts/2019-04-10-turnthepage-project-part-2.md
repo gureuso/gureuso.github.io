@@ -32,7 +32,7 @@ comments: true
 
 ![turnthepage-project-part-2-05](/assets/images/turnthepage-project-part-2/05.png)
 
-등록한 책들을 볼수 있는 페이지로 진도 퍼센트와 클리어 여부를 알수 있다.
+등록한 책들을 볼수 있는 페이지로 진도 퍼센트, 성공, 실패 여부 등을 알수 있다.
 
 ## book create
 
@@ -54,9 +54,9 @@ comments: true
 
 책 상세 정보와 얼만큼 진도를 나갔는지 알수 있다.
 
-![turnthepage-project-part-2-10](/assets/images/turnthepage-project-part-2/10.png)
+![turnthepage-project-part-2-11](/assets/images/turnthepage-project-part-2/10.png)
 
-![turnthepage-project-part-2-11](/assets/images/turnthepage-project-part-2/11.png)
+![turnthepage-project-part-2-12](/assets/images/turnthepage-project-part-2/11.png)
 
 반응형 사이트 구현을 위해 북 상세 페이지 영역을 col-lg-4 col-sm-5로 주고 댓글 페이지 영역은 col-lg-8 col-sm-7로 주었다.
 
