@@ -14,10 +14,6 @@ body {
   background-color: #ffffff;
 }
 
-ul {
-  overflow: auto;
-}
-
 p {
   line-height: 24px;
 }
