@@ -36,6 +36,19 @@ a:hover {
   min-height: 100vh;
 }
 
+.tag {
+  list-style: none;
+  margin: 15px 0 15px 0;
+  padding: 0;
+}
+
+.tag > li {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #eaeaea;
+  margin-top: 5px;
+}
+
 /* sidebar */
 #sidebar {
   background-color: #eaeaea;
@@ -125,19 +138,6 @@ a:hover {
   padding: 2px 4px;
   background-color: #eaeaea;
   font-size: 90%;
-}
-
-#main-post-tag {
-  list-style: none;
-  margin: 15px 0 15px 0;
-  padding: 0;
-}
-
-#main-post-tag > li {
-  display: inline-block;
-  padding: 5px 20px;
-  background-color: #eaeaea;
-  margin-top: 5px;
 }
 
 .main-links {

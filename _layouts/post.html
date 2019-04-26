@@ -6,7 +6,7 @@ layout: default
   <span>{{ page.date | date: '%Y-%m-%d %H:%M' }}</span>
   <span>{{ page.written_by }}</span>
   <p>{{ content }}</p>
-  <ul id="main-post-tag">
+  <ul class="tag">
     {% for tag in page.tags %}
       <li>{{ tag }}</li>
     {% endfor %}
