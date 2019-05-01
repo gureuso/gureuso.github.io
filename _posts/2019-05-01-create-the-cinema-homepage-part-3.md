@@ -200,6 +200,8 @@ EXPOSE 3000
 
 # 마치며
 
+![create-the-cinema-homepage-part-3-03](/assets/images/create-the-cinema-homepage-part-3/03.png)
+
 많은 API를 활용해서 화려하게는 만들지 못했지만 React를 체험하기 좋은 시간이였던 것 같다. 
-러닝커브가 높아진 만큼 배움에 가치를 느낄수 있어서 좋았다. 
+러닝커브가 높아진 만큼 배움의 가치를 느낄수 있어서 좋았다. 
 아직 용어 이해가 안되는 부분이 좀 있는데 복습하면서 다시 공부해봐야겠다.
