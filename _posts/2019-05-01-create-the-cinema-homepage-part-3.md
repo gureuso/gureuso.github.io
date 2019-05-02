@@ -175,6 +175,20 @@ server.get('/movies/:id', (req, res) => {
 
 `/movies/1` URL을 요청하면 `movies/1.js` 파일을 찾게 된다. 이 부분을 Express 라우팅을 통해 해결했다.
 
+## SPA
+
+![create-the-cinema-homepage-part-3-04](/assets/images/create-the-cinema-homepage-part-3/04.gif)
+
+```js
+import Link from 'next/link';
+
+<Link href={"/theaters/"+showtime.theater.id+"/showtimes/"+showtime.id}><a>
+  //code
+</a></Link>
+```
+
+Next.js에서는 위와 같이 코딩만 해주면 싱글 페이지 앱이 완성된다. 진짜 편하게 만들어 놨다.
+
 ## 배포
 
 배포 시 도커만한게 없더라. 평소처럼 DB 생성하고 API 연결하고 APP을 만들었다.
