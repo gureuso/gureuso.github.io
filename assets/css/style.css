@@ -16,6 +16,7 @@ body {
 
 p {
   line-height: 24px;
+  overflow: auto;
 }
 
 i {
@@ -101,10 +102,6 @@ a:hover {
 
 #main-post > h1 {
   margin-bottom: 10px;
-}
-
-#main-post > ul > li {
-  overflow: auto;
 }
 
 #main-post > ul > li, #main-post > ul > li:last-child {

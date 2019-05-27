@@ -34,11 +34,11 @@ def generate_presigned_url_(self, Key=None, ExpiresIn=0):
 
 signed_url:
 
-- https://s3.ap-northeast-2.amazonaws.com/name/private/2016/06/09/140910770588e7825eb771b1d73ed80e152d_20160119_123551.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=10&X-Amz-Credential=AKIAIK3YNFDYX7HZ2U7Q%2F20160609%2Fap-northeast-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20160609T094138Z&X-Amz-Signature=079a0e1fd77ddd8148e148f3f2b1f7c4cfc259132adef23cda28ac70ee8ade04
+https://s3.ap-northeast-2.amazonaws.com/name/private/2016/06/09/140910770588e7825eb771b1d73ed80e152d_20160119_123551.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=10&X-Amz-Credential=AKIAIK3YNFDYX7HZ2U7Q%2F20160609%2Fap-northeast-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20160609T094138Z&X-Amz-Signature=079a0e1fd77ddd8148e148f3f2b1f7c4cfc259132adef23cda28ac70ee8ade04
 
 origin:
 
-- https://s3.ap-northeast-2.amazonaws.com/name/private/2016/06/09/140910770588e7825eb771b1d73ed80e152d_20160119_123551.jpeg
+https://s3.ap-northeast-2.amazonaws.com/name/private/2016/06/09/140910770588e7825eb771b1d73ed80e152d_20160119_123551.jpeg
 
 굿~인 줄 알았는데 s3가 아니라 cloudfront로 연결을 했어야만 했다.
 
