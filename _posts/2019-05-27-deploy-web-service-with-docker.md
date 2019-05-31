@@ -15,14 +15,14 @@ comments: true
 ![deploy-web-service-with-docker-01](/assets/images/deploy-web-service-with-docker/01.png)
 
 각각의 서비스들은 docker로 돌아가며 고유 포트번호를 가지고 있다. ELB는 도메인을 해당 포트로 리다이렉션 해주고 있다.
-ACM에서 발급받은 인증서를 통해 https도 지원해준다. 이 구조는 한 달도 못가 바꾸게 되었다. 무엇이 문제였을까?
+ACM에서 발급받은 인증서를 통해 https도 지원해 준다. 이 구조는 한 달도 못가 바꾸게 되었다. 무엇이 문제였을까?
 바로 돈이였다.
 
 > 1 load balancers x 0.025 USD x 730 hours in a month = 18.25 USD
 
 한 개의 웹 서비스는 한 개의 로드밸런서를 가져야 한다. 이 구조의 치명적인 약점으로 결국 내 돈 $25.24를 가져갔다. ~~진짜 얄짤 없이 가져가더라.~~
 
-무작정 서비스 하고 치룬 대가였다. 그렇게 구조를 바꾸게 된 계기였다.
+무작정 서비스하고 치룬 대가였다. 그렇게 구조를 바꾸게 된 계기였다.
 
 # Apache
 
@@ -81,10 +81,10 @@ services:
   proxy:
     image: nginx:latest
     ports:
-      - '8001:8001'
+      - '8000:8000'
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-      - ./admin-demo:/var/www/admin-demo
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./turnthepage:/var/www/turnthepage
     depends_on:
       - web
   web:
@@ -97,19 +97,23 @@ services:
     depends_on:
       - db
     volumes:
-      - ./admin-demo:/root/admin-demo
+      - ./turnthepage:/root/turnthepage
     expose:
       - '8000'
   db:
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=admin
+      - MYSQL_DATABASE=turnthepage
     volumes:
       - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - db:/var/lib/mysql
+
+volumes:
+  db:
 ```
 
-도커 커맨드를 옮긴 거라서 크게 설명할 부분은 없는 것 같다. 짚고 넘어가야 부분은 depends_on과 dockerize이다.
+도커 커맨드를 옮긴 거라서 크게 설명할 부분은 없는 것 같다. 짚고 넘어가야 할 부분은 depends_on과 dockerize이다.
 
 depends_on은 실행 순서에만 관여하고 완료까지는 간섭하지 않는다. 이렇게 될 경우 db -> web -> proxy 순으로 실행되지만 
 db가 web보다 늦게 완료될 경우 db 연결을 하지 못하고 web 서비스가 종료될 수 있다.
@@ -119,6 +123,12 @@ command: bash -c 'dockerize -wait tcp://db:3306 -timeout 30s && python manage.py
 ```
 
 이 문제를 dockerize가 해결해주고 있다. dockerize는 커넥션이 될때까지 wait 해주는 녀석으로 앞서 말한 커넥션 종료 상황을 방지해준다.
+
+```sh
+- db:/var/lib/mysql
+```
+
+volumes를 빼먹었는데 DB 컨테이너가 사라질 경우 data도 같이 사라져 버린다. docker volume을 이용해서 컨테이너와 상관없이 데이터를 유지할 수 있게 만들었다.
 
 ![deploy-web-service-with-docker-02](/assets/images/deploy-web-service-with-docker/02.png)
 
