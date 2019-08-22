@@ -168,7 +168,26 @@ a:hover {
 }
 
 #main-pagination {
-  padding-top: 10px;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+
+#main-pagination > a, #main-pagination > em {
+  padding: 10px;
+  font-size: 25px;
+}
+
+#main-pagination > a:hover {
+  border-bottom: 1px solid #ee8978;
+}
+
+#main-pagination > a {
+  color: gray;
+}
+
+#main-pagination > em {
+  color: #ee8978;
+  border-bottom: 1px solid #ee8978;
 }
 
 #category-posts-title {

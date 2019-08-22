@@ -1,12 +1,29 @@
-<div class="main-links" id="main-pagination">
-  {% if paginator.previous_page %}
-    <div class="main-links-prev" onclick="goToURL('{{ paginator.previous_page_path }}')">
-      <a href="{{ paginator.previous_page_path }}">이전</a>
-    </div>
+{% if paginator.total_pages > 1 %}
+<div id="main-pagination">
+  {% assign prev_page_num = paginator.page | minus: 2 %}
+  {% assign next_page_num = paginator.page | plus: 2 %}
+
+  {% if prev_page_num < 1 %}
+    {% assign prev_page_num = 1 %}
+    {% if 5 > paginator.total_pages %}
+      {% assign next_page_num = paginator.total_pages %}
+    {% else %}
+      {% assign next_page_num = 5 %}
+    {% endif %}
   {% endif %}
-  {% if paginator.next_page %}
-    <div class="main-links-next" onclick="goToURL('{{ paginator.next_page_path }}')">
-      <a href="{{ paginator.next_page_path }}">다음</a>
-    </div>
+
+  {% if next_page_num > paginator.total_pages %}
+    {% assign next_page_num = paginator.total_pages %}
   {% endif %}
+
+  {% for page in (prev_page_num..next_page_num) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
 </div>
+{% endif %}
