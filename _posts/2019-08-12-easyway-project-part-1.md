@@ -24,7 +24,7 @@ comments: true
 
 # 기능
 
-![easyway-project-part-1-01](/assets/images/easyway-project-part-1/01.png)
+![easyway-project-part-1-01](/assets/images/about/08.png)
 
 전체적인 모습은 이렇다. 타이틀, 로고, 탭, 리스트, 푸터 등으로 이루어져있다. 타이틀 아래 아스팔트 이미지는 EASYWAY를 표현하고 싶어 만들어봤다.
 큰 기능으로는 `수동 리프레쉬`, `자동 리프레쉬`, `상세 날씨보기` 기능 등이 있다.
