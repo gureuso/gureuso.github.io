@@ -5,7 +5,7 @@ description: >
 baseurl: ""
 url: "https://tech.gureuso.me"
 timezone: Asia/Seoul
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title
 markdown: kramdown
 plugins:
   - jekyll-feed
