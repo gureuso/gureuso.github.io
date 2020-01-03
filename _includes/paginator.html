@@ -1,14 +1,14 @@
 {% if paginator.total_pages > 1 %}
 <div id="main-pagination">
-  {% assign prev_page_num = paginator.page | minus: 2 %}
-  {% assign next_page_num = paginator.page | plus: 2 %}
+  {% assign prev_page_num = paginator.page | minus: 1 %}
+  {% assign next_page_num = paginator.page | plus: 1 %}
 
   {% if prev_page_num < 1 %}
     {% assign prev_page_num = 1 %}
-    {% if 5 > paginator.total_pages %}
+    {% if 3 > paginator.total_pages %}
       {% assign next_page_num = paginator.total_pages %}
     {% else %}
-      {% assign next_page_num = 5 %}
+      {% assign next_page_num = 3 %}
     {% endif %}
   {% endif %}
 
@@ -16,14 +16,24 @@
     {% assign next_page_num = paginator.total_pages %}
   {% endif %}
 
+  {% if prev_page_num >= 2 %}
+    <a href="{{ site.url }}">1</a>
+    <a>...</a>
+  {% endif %}
+
   {% for page in (prev_page_num..next_page_num) %}
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+      <a href="{{ site.url }}">{{ page }}</a>
     {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
+
+  {% if next_page_num != paginator.total_pages %}
+    <a>...</a>
+    <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
+  {% endif %}
 </div>
 {% endif %}
