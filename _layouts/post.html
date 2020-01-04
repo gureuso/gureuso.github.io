@@ -5,14 +5,30 @@ layout: default
   <h1>{{ page.title }}</h1>
   <span>{{ page.date | date: '%Y-%m-%d %H:%M' }}</span>
   <span>{{ page.written_by }}</span>
-  <p>{{ content }}</p>
+  {{ content }}
   <ul class="tag">
     {% for tag in page.tags %}
       <li>{{ tag }}</li>
     {% endfor %}
   </ul>
 </div>
-{% include links.html %}
+
+<div class="main-links">
+  {% if page.previous.url %}
+  <div class="main-links-prev" id="main-post-pagination-prev" onclick="goToURL('{{ page.previous.url }}')">
+    <a href="{{ page.previous.url }}">&lt {{ page.previous.title }}</a>
+  </div>
+  {% endif %}
+  {% if page.next.url %}
+  <div class="main-links-next" id="main-post-pagination-next" onclick="goToURL('{{ page.next.url }}')">
+    <a href="{{ page.next.url }}">{{ page.next.title }} &gt</a>
+  </div>
+  {% endif %}
+</div>
+
 {% include category_posts.html %}
 {% include comments.html %}
-{% include copyright.html %}
+
+<div id="copyright">
+  <span>Copyright 2019. Gureuso. All rights reserved.</span>
+</div>
