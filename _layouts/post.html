@@ -28,10 +28,10 @@ layout: default
 
 <table>
 {% for related_post in site.related_posts limit:5 %}
-  <tr onclick="goToURL('{{ related_post.url }}')" style="cursor: pointer">
+  <tr>
     <td class="related-post-img">
       {% if related_post.thumbnail %}
-      <img src="{{ related_post.thumbnail }}">
+      <img src="{{ related_post.thumbnail }}" onclick="goToURL('{{ related_post.url }}')" style="cursor: pointer">
       {% else %}
       <div></div>
       {% endif %}
