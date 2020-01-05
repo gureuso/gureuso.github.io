@@ -250,4 +250,14 @@ a:hover {
     display: table-caption;
     width: 100%;
   }
+
+  .related-post-img > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .related-post-img > div {
+    width: 100px;
+    height: 100px;
+  }
 }
