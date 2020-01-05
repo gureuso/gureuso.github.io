@@ -2,7 +2,8 @@
 layout: post
 title: "도커로 웹 서비스 배포하기"
 date: 2019-05-27 17:56:49 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/deploy-web-service-with-docker/01.png"
 categories: ["server"]
 tags: ["docker", "docker-compose"]
 comments: true

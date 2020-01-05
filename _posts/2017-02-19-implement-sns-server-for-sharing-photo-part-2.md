@@ -2,7 +2,8 @@
 layout: post
 title: "사진 공유 SNS 서버 개발하기 part 2"
 date: 2017-02-19 22:30:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/implement-sns-server-for-sharing-photo-part-2/01.jpg"
 categories: ["project"]
 tags: ["aws", "sns", "api"]
 comments: true

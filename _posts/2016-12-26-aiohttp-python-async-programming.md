@@ -2,7 +2,8 @@
 layout: post
 title: "aiohttp를 활용한 파이썬 비동기 프로그래밍"
 date: 2016-12-26 11:51:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/aiohttp-python-async-programming/01.jpg"
 categories: ["programming"]
 tags: ["python", "aiohttp", "gunicorn"]
 comments: true

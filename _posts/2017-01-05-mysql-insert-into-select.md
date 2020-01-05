@@ -2,7 +2,7 @@
 layout: post
 title: "SELECT 한 데이터 동시에 INSERT 하기"
 date: 2017-01-05 16:30:30 +0900
-written_by: "구르소"
+author: "구르소"
 categories: ["database"]
 tags: ["mysql"]
 comments: true

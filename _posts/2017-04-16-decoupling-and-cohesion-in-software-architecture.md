@@ -2,7 +2,7 @@
 layout: post
 title: "Decoupling and Cohesion in software architecture"
 date: 2017-04-16 15:10:30 +0900
-written_by: "구르소"
+author: "구르소"
 categories: ["programming"]
 tags: ["decoupling", "cohesion"]
 comments: true

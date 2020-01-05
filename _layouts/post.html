@@ -4,7 +4,7 @@ layout: default
 <div id="main-post">
   <h1>{{ page.title }}</h1>
   <span>{{ page.date | date: '%Y-%m-%d %H:%M' }}</span>
-  <span>{{ page.written_by }}</span>
+  <span>{{ page.author }}</span>
   {{ content }}
   <ul class="tag">
     {% for tag in page.tags %}
@@ -15,18 +15,37 @@ layout: default
 
 <div class="main-links">
   {% if page.previous.url %}
-  <div class="main-links-prev" id="main-post-pagination-prev" onclick="goToURL('{{ page.previous.url }}')">
-    <a href="{{ page.previous.url }}">&lt {{ page.previous.title }}</a>
-  </div>
+    <div class="main-links-prev" id="main-post-pagination-prev" onclick="goToURL('{{ page.previous.url }}')">
+      <a href="{{ page.previous.url }}">&lt {{ page.previous.title }}</a>
+    </div>
   {% endif %}
   {% if page.next.url %}
-  <div class="main-links-next" id="main-post-pagination-next" onclick="goToURL('{{ page.next.url }}')">
-    <a href="{{ page.next.url }}">{{ page.next.title }} &gt</a>
-  </div>
+    <div class="main-links-next" id="main-post-pagination-next" onclick="goToURL('{{ page.next.url }}')">
+      <a href="{{ page.next.url }}">{{ page.next.title }} &gt</a>
+    </div>
   {% endif %}
 </div>
 
-{% include category_posts.html %}
+<table>
+{% for related_post in site.related_posts limit:5 %}
+  <tr onclick="goToURL('{{ related_post.url }}')" style="cursor: pointer">
+    <td class="related-post-img">
+      {% if related_post.thumbnail %}
+      <img src="{{ related_post.thumbnail }}">
+      {% else %}
+      <div></div>
+      {% endif %}
+    </td>
+    <td class="related-post-title">
+      <div>
+        <a href="{{ related_post.url }}">{{ related_post.title }}</a>
+      </div>
+      <span>{{ related_post.excerpt | strip_html | truncatewords: 20 }}</span>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
 {% include comments.html %}
 
 <div id="copyright">

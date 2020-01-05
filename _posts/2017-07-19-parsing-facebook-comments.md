@@ -2,7 +2,8 @@
 layout: post
 title: "페이스북 댓글 파싱하기"
 date: 2017-07-20 02:30:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/parsing-facebook-comments/01.jpg"
 categories: ["programming"]
 tags: ["python", "facebook", "parsing"]
 comments: true

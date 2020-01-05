@@ -2,7 +2,8 @@
 layout: post
 title: "턴더페 프로젝트 part 1"
 date: 2019-02-19 19:53:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/turnthepage-project-part-1/01.png"
 categories: ["project"]
 tags: ["django"]
 comments: true

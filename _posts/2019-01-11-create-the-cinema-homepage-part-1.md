@@ -2,7 +2,8 @@
 layout: post
 title: "영화 예매 사이트 개발하기 part 1"
 date: 2019-01-11 13:30:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/create-the-cinema-homepage-part-1/01.png"
 categories: ["project"]
 tags: ["aws", "flask", "bootstrap4"]
 comments: true

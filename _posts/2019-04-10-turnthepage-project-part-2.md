@@ -2,7 +2,8 @@
 layout: post
 title: "턴더페 프로젝트 part 2"
 date: 2019-04-10 16:11:30 +0900
-written_by: "구르소"
+author: "구르소"
+thumbnail: "/assets/images/turnthepage-project-part-2/01.png"
 categories: ["project"]
 tags: ["bootstrap4"]
 comments: true

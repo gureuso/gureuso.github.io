@@ -190,13 +190,28 @@ a:hover {
   border-bottom: 1px solid #ee8978;
 }
 
-#category-posts-title {
-  margin-top: 10px;
+.related-post-img > img {
+  width: 150px;
+  height: 150px;
 }
 
-.category-posts {
+.related-post-img > div {
+  background-color: #eaeaea;
+  width: 150px;
+  height: 150px;
+}
+
+.related-post-title {
+  padding-left: 30px;
+}
+
+.related-post-title > div {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.related-post-title > div > a {
   font-size: 20px;
-  margin: 10px 5px;
 }
 
 #copyright {
