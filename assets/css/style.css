@@ -261,6 +261,10 @@ a:hover {
     height: 100px;
   }
 
+  .related-post-title > div {
+    padding-bottom: 5px;
+  }
+
   .related-post-title > div > a {
     font-size: 18px;
   }
