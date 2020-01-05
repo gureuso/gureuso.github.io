@@ -260,4 +260,12 @@ a:hover {
     width: 100px;
     height: 100px;
   }
+
+  .related-post-title > div > a {
+    font-size: 18px;
+  }
+
+  .related-post-title > span {
+    font-size: 14px;
+  }
 }
