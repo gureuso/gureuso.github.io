@@ -80,18 +80,18 @@ a:hover {
 
 #search > input {
   position: relative;
-  top: -30px;
+  top: -33px;
   left: 10px;
-  width: 150px;
-  height: 30px;
+  width: 155px;
+  height: 35px;
   font-size: 16px;
 }
 
 #search > i {
   color: #adb5bd;
   position: relative;
-  top: -30px;
-  left: -15px;
+  top: -33px;
+  left: -18px;
   cursor: pointer;
 }
 
