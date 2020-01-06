@@ -74,6 +74,42 @@ a:hover {
   margin: 0 4px;
 }
 
+#search {
+  display: inline-block;
+}
+
+#search > input {
+  position: relative;
+  top: -30px;
+  left: 10px;
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+}
+
+#search > i {
+  color: #adb5bd;
+  position: relative;
+  top: -30px;
+  left: -15px;
+  cursor: pointer;
+}
+
+#search-result {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  top: 260px;
+  left: 75px;
+  text-align: left;
+  background-color: white;
+  border: solid 1px #eaeaea;
+}
+
+#search-result > li {
+  padding-bottom: 5px;
+}
+
 /* main */
 #main {
   background-color: #ffffff;
