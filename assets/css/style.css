@@ -226,6 +226,23 @@ a:hover {
   border-bottom: 1px solid #ee8978;
 }
 
+/* about */
+.about-table {
+  width: 100%;
+}
+
+.about-table > tbody > tr > td:first-child {
+  width: 30%;
+}
+
+.about-table > tbody > tr > td:last-child {
+  width: 70%;
+}
+
+.about-desc > li {
+  padding-bottom: 10px;
+}
+
 .related-post-img > img {
   width: 150px;
   height: 150px;
