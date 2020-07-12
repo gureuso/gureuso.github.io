@@ -69,12 +69,14 @@ https://galid1.tistory.com/466
 
 https://dnight.tistory.com/entry/Jenkins-Slack-%EC%95%8C%EB%A6%BC-%EC%97%B0%EB%8F%99
 
-# 마치며
+# 결과
 
 ![create-ci-cd-pipeline-in-jenkins-07](/assets/images/create-ci-cd-pipeline-in-jenkins/07.png)
 
 유저는 Jira를 통해 이슈를 관리 할수 있으며 git 액션에 따라 이슈 상태가 자동으로 변경된다. 또한 코드 merge 시 Jenkins는 자동으로 배포를 시작한다. 그리고 그 결과를 
  Slack으로 받을 수 있다.
+
+# 마치며
 
 CI/CD 툴을 전체적으로 써볼 수 있어서 좋았고 제대로 된 개발 환경을 구축했다는 사실이 너무 뿌듯했다. 다만 워크플로우는 친구의 도움으로 해결해서 그 부분이 아쉽다고 느껴졌다. 
 서버를 많이 다뤄봤다고 자부하지만 아직도 실력이 부족하다고 생각이 든다. 더 열심히 하자. 끝.
