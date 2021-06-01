@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "인사이드 자바스크립트"
+title: "인사이드 자바스크립트 part 1"
 date: 2021-06-01 20:00:49 +0900
 author: "구르소"
 thumbnail: "/assets/images/inside-javascript-part-1/01.jpg"
