@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "프리랜서로 살아남기 part 1"
-date: 2021-01-16 16:00:49 +0900
-author: "구르소"
+title: ""
+date: 2021-06-01 20:00:49 +0900
+author: "인사이드 자바스크립트"
 thumbnail: "/assets/images/inside-javascript-part-1/01.jpg"
 categories: ["programming"]
 tags: ["js", "javascript"]
