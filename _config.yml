@@ -3,7 +3,7 @@ email: wyun13043@gmail.com
 description: >
   If really love what you do, then the rest follows
 baseurl: ""
-url: "https://tech.gureuso.me"
+url: "http://tech.devmaker.kr"
 timezone: Asia/Seoul
 permalink: /:year/:month/:day/:title
 markdown: kramdown
