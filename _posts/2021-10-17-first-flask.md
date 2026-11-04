@@ -3,7 +3,7 @@ layout: post
 title: "처음 배우는 플라스크 웹 프로그래밍 책 집필 회고"
 date: 2021-10-17 03:00:49 +0900
 author: "구르소"
-thumbnail: "https://gureuso.me/images/book.jpeg"
+thumbnail: "https://cdn-prod.hanbit.co.kr/books/B9575488572_l.jpg"
 categories: ["programming"]
 tags: ["python", "flask"]
 comments: true
