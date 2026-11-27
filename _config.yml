@@ -1,21 +1,63 @@
 title: 구르소 기술 블로그
+author: 구르소
 email: wyun13043@gmail.com
 description: >
   If really love what you do, then the rest follows
 baseurl: ""
-url: "http://tech.devmaker.kr"
+url: "https://tech.devmaker.kr"
+lang: ko_KR
 timezone: Asia/Seoul
 permalink: /:year/:month/:day/:title
+
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      disable: true
+
 plugins:
-  - jekyll-feed
   - jekyll-paginate
-exclude: ["Gemfile", "Gemfile.lock"]
+  - jekyll-seo-tag
+
+paginate: 4
+paginate_path: "/pages/:num/"
+
 asset_url: /assets
-keep_files: ["assets", "files"]
+logo: /assets/images/profile.jpg
 
 github:
-  username:  gureuso
+  username: gureuso
 
-paginate: 5
-paginate_path: "/pages/:num/"
+# 댓글: giscus (GitHub Discussions 기반) — https://giscus.app
+# category_id 가 비어 있으면 댓글 영역을 출력하지 않음
+giscus:
+  repo: gureuso/gureuso.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnk3NTU4MzAxOA==
+  category: Announcements
+  category_id: DIC_kwDOBIFOKs4DMEb3
+
+# Google Analytics 4 측정 ID (예: G-XXXXXXXXXX). 비우면 미사용
+# 기존 UA-89405223-1 은 2023년 서비스 종료되어 제거함
+google_analytics_id: ""
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: 구르소
+      comments: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .idea
+  - README.md
+  - SECURITY.md
+  - LICENSE

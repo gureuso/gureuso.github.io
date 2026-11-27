@@ -76,6 +76,7 @@ server.js는 express로 만들어 졌는데 왜 express를 사용하게 됐는�
 
 ## 랜더링
 
+{% raw %}
 ```html
 <div class="card-columns">
   for movie in movies
@@ -96,6 +97,7 @@ server.js는 express로 만들어 졌는데 왜 express를 사용하게 됐는�
   endfor
 </div>
 ```
+{% endraw %}
 
 ```js
 class Movies extends React.Component {

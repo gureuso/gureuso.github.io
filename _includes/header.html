@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ site.logo | relative_url }}" alt="" width="32" height="32">
+      <span>{{ site.title }}</span>
+    </a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="{{ '/' | relative_url }}"{% if page.layout == 'home' or page.layout == 'post' %} aria-current="page"{% endif %}>글</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>소개</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <button type="button" class="icon-btn" data-search-open aria-label="검색 (단축키 /)">{% include icon.html name='search' %}</button>
+      <a class="icon-btn" href="https://github.com/{{ site.github.username }}" aria-label="GitHub" rel="noopener">{% include icon.html name='github' %}</a>
+    </nav>
+  </div>
+</header>

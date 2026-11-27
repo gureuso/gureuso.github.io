@@ -4,12 +4,13 @@
     {% include head.html %}
     {% include google_analytics.html %}
   </head>
-  <body name="top">
-    <div id="container">
-      {% include sidebar.html %}
-      <div id="main">
-        {{ content }}
-      </div>
-    </div>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    {% include header.html %}
+    <main id="main" class="site-main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include search.html %}
   </body>
 </html>

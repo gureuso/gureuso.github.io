@@ -1,7 +1,20 @@
 ---
 layout: default
 ---
-<div id="main-title">
-  <h1>게시물들</h1>
-</div>
-{{ content }}
+{%- if paginator.page == 1 -%}
+<section class="hero container">
+  <img class="hero-avatar" src="{{ site.logo | relative_url }}" alt="{{ site.author }} 프로필" width="88" height="88">
+  <div>
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-desc">{{ site.description }}</p>
+    <p class="hero-sub">직장인, 프리랜서로 일하며 배운 것들을 기록합니다.</p>
+  </div>
+</section>
+{%- endif -%}
+<section class="container narrow">
+  <div class="list-head">
+    <h2 class="section-title">{% if paginator.page == 1 %}최신 글{% else %}글 목록 · {{ paginator.page }} / {{ paginator.total_pages }}{% endif %}</h2>
+    <span class="count">총 {{ site.posts.size }}개</span>
+  </div>
+  {{ content }}
+</section>

@@ -2,11 +2,21 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+gem "jekyll", "~> 4.4"
 
-# gem "rails"
+group :jekyll_plugins do
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-seo-tag", "~> 2.8"
+end
 
-gem "jekyll", "~> 3.8"
-gem "jekyll-paginate", "1.1.0"
-gem "jekyll-feed", "0.11.0"
-gem "kramdown", "2.3.1"
+# Ruby 3.4+ 에서 기본 gem 에서 빠진 것들
+gem "webrick", "~> 1.9"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+
+platforms :windows, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end

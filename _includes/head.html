@@ -1,45 +1,12 @@
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta itemprop="description" name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0f1115">
+{% seo %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="{{ '/rss/' | relative_url }}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 
-<link href="{{ site.asset_url }}/css/style.css" rel="stylesheet" type="text/css">
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
-<script>
-  var sjs = undefined;
-  $.ajax({
-    url : '{{ site.asset_url }}/search.json',
-    type: 'GET',
-    success: function(data){
-      sjs = SimpleJekyllSearch({
-        searchInput: $('#search > input')[0],
-        resultsContainer: $('#search-result')[0],
-        json: data
-      });
-    }
-  });
-</script>
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/androidstudio.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-  function goToURL(url) {
-    location.href = url;
-  }
-
-  function showSearch() {
-    $('#search').css({'display': 'block'});
-    $('#search > input').focus();
-  }
-
-  function hideSearch() {
-    $('#search').css({'display': 'none'});
-  }
-</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

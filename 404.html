@@ -1,8 +1,12 @@
 ---
 layout: default
-title: 404
+title: 페이지를 찾을 수 없습니다
 permalink: /404.html
+sitemap: false
 ---
-<div id="main-title">
-  <h1>404 NotFound</h1>
-</div>
+<section class="container narrow notfound">
+  <p class="notfound-code">404</p>
+  <h1>페이지를 찾을 수 없습니다</h1>
+  <p>주소가 바뀌었거나 삭제된 글일 수 있어요.</p>
+  <p><a class="btn" href="{{ '/' | relative_url }}">홈으로</a> <button type="button" class="btn ghost" data-search-open>글 검색</button></p>
+</section>

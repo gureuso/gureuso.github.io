@@ -1,7 +1,9 @@
 ---
 layout: home
 ---
-{% for post in paginator.posts %}
-  {% include post.html %}
-{% endfor %}
+<div class="post-list">
+  {%- for post in paginator.posts -%}
+    {% include post-card.html post=post %}
+  {%- endfor -%}
+</div>
 {% include paginator.html %}

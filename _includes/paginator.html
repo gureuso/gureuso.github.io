@@ -1,39 +1,25 @@
-{% if paginator.total_pages > 1 %}
-<div id="main-pagination">
-  {% assign prev_page_num = paginator.page | minus: 1 %}
-  {% assign next_page_num = paginator.page | plus: 1 %}
-
-  {% if prev_page_num < 1 %}
-    {% assign prev_page_num = 1 %}
-    {% if 3 > paginator.total_pages %}
-      {% assign next_page_num = paginator.total_pages %}
-    {% else %}
-      {% assign next_page_num = 3 %}
-    {% endif %}
-  {% endif %}
-
-  {% if next_page_num > paginator.total_pages %}
-    {% assign next_page_num = paginator.total_pages %}
-  {% endif %}
-
-  {% if prev_page_num >= 2 %}
-    <a href="{{ site.url }}">1</a>
-    <a>...</a>
-  {% endif %}
-
-  {% for page in (prev_page_num..next_page_num) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ site.url }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if next_page_num != paginator.total_pages %}
-    <a>...</a>
-    <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
-  {% endif %}
-</div>
-{% endif %}
+{%- if paginator.total_pages > 1 -%}
+<nav class="pagination" aria-label="페이지">
+  {%- if paginator.previous_page -%}
+    <a class="page-step" href="{{ paginator.previous_page_path | relative_url }}">← 이전</a>
+  {%- else -%}
+    <span class="page-step disabled">← 이전</span>
+  {%- endif -%}
+  <span class="page-nums">
+  {%- for num in (1..paginator.total_pages) -%}
+    {%- if num == paginator.page -%}
+      <span class="page-num current" aria-current="page">{{ num }}</span>
+    {%- elsif num == 1 -%}
+      <a class="page-num" href="{{ '/' | relative_url }}">1</a>
+    {%- else -%}
+      <a class="page-num" href="{{ site.paginate_path | replace: ':num', num | relative_url }}">{{ num }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+  </span>
+  {%- if paginator.next_page -%}
+    <a class="page-step" href="{{ paginator.next_page_path | relative_url }}">다음 →</a>
+  {%- else -%}
+    <span class="page-step disabled">다음 →</span>
+  {%- endif -%}
+</nav>
+{%- endif -%}

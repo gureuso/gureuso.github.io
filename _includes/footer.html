@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span data-year>{{ site.time | date: '%Y' }}</span> {{ site.author }}. All rights reserved.</span>
+    <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+    <span class="footer-links">
+      <a href="{{ '/rss/' | relative_url }}" aria-label="RSS">{% include icon.html name='rss' %}</a>
+      <a href="https://github.com/{{ site.github.username }}" aria-label="GitHub" rel="noopener">{% include icon.html name='github' %}</a>
+    </span>
+  </div>
+</footer>
+<button type="button" class="to-top" data-to-top aria-label="맨 위로">{% include icon.html name='arrow-up' %}</button>

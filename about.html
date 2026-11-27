@@ -1,337 +1,146 @@
 ---
-layout: default
-title: About
+layout: page
+title: 소개
+subtitle: 파이썬 개발자 · 저자 · 강사
 permalink: /about/
 ---
-<div id="main-title">
-  <h1>자기소개</h1>
-</div>
-<div id="main-post">
-  <p>안녕하세요. 파이썬 저자, 개발자, 강사를 하고있는 윤정현입니다.</p>
-  <p>“관리자가 주말에 쉴 수 있는 서버를 만들자” 라는 다짐으로 저만의 서버 이야기를 만들어 가고 있습니다.</p>
-  <p>010-8417-3012 / wyun13043@gmail.com</p>
+<div class="about">
 
-  <h2>스킬</h2>
-  <ul>
-    <li>
-      <b>Back-end</b><br>
-      <ul class="tag">
-        <li>Flask</li>
-        <li>Django</li>
-        <li>FastAPI</li>
-        <li>Nest.js</li>
+  <section class="about-intro">
+    <img class="about-avatar" src="{{ site.logo | relative_url }}" alt="윤정현 프로필" width="112" height="112">
+    <div>
+      <p class="about-name">윤정현 <span>현업 개발자</span></p>
+      <p>파이썬 책을 쓰고, 서비스를 만들고, 코딩을 가르칩니다. 2015년부터 서비스를 개발해 왔고, 지금은 데브메이커를 운영하며 학생이 스스로 만들 수 있을 때까지 1:1로 함께하고 있습니다.</p>
+      <p class="about-quote">“관리자가 주말에 쉴 수 있는 서버를 만들자”</p>
+      <ul class="about-links">
+        <li><a href="https://github.com/gureuso" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/gureuso/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devmaker.kr/teacher" rel="noopener">데브메이커</a></li>
+        <li><a href="mailto:wyun13043@gmail.com">wyun13043@gmail.com</a></li>
+        <li>010-8417-3012</li>
       </ul>
-      <p>Flask Blueprint로 대규모 어플리케이션을 구현했습니다. Django ORM, Form, Class-based view를 이해하고 있습니다. Django channels를 이용해 채팅 서버를 개발했습니다. FastAPI를 활용해 어드민 페이지를 개발했습니다.</p>
+    </div>
+  </section>
+
+  <ul class="about-stats">
+    <li><strong>8년+</strong><span>개발 경력</span></li>
+    <li><strong>250만</strong><span>관리해 본 유저 수</span></li>
+    <li><strong>2권</strong><span>한빛미디어 집필</span></li>
+    <li><strong>2개</strong><span>인프런 강의</span></li>
+  </ul>
+
+  <h2>하이라이트</h2>
+  <ul class="about-checks">
+    <li>파이썬으로 250만 유저 규모의 글로벌 서비스 백엔드 개발</li>
+    <li>TypeScript 기반 블록체인 개발 (KAIA, TON)</li>
+    <li>프리랜서 외주 다수 진행 · 크몽 리뷰 18개, 평점 5.0</li>
+    <li>한빛미디어 『핸즈온 FastAPI』, 『처음 배우는 플라스크 웹 프로그래밍』 집필</li>
+    <li>인프런 「FastAPI 더 잘써먹기」, 「파이썬 자료구조와 알고리즘으로 만드는 미니 게임」 강의</li>
+    <li>고려대 데이터 청년 캠퍼스 특강 · 전남대 블록체인 멘토</li>
+    <li>프로그래밍 과외 15명 이상 · 숨고 리뷰 6개, 평점 5.0</li>
+  </ul>
+
+  <h2>책 · 강의</h2>
+  <div class="about-cards">
+    <div class="about-card"><span class="about-card-kind">📘 한빛미디어</span><strong>핸즈온 FastAPI</strong><p>FastAPI로 실무 백엔드를 만드는 법</p></div>
+    <div class="about-card"><span class="about-card-kind">📗 한빛미디어</span><strong>처음 배우는 플라스크 웹 프로그래밍</strong><p>플라스크로 개발·테스트·배포·비동기까지</p></div>
+    <div class="about-card"><span class="about-card-kind">🎬 인프런</span><strong>FastAPI 더 잘써먹기 with 유튜브 클론코딩</strong><p>유튜브를 클론하며 배우는 FastAPI</p></div>
+    <div class="about-card"><span class="about-card-kind">🎮 인프런</span><strong>파이썬 자료구조와 알고리즘으로 만드는 미니 게임</strong><p>게임을 만들며 익히는 자료구조와 알고리즘</p></div>
+  </div>
+
+  <h2>경력 <small>총 8년 1개월</small></h2>
+  <ol class="timeline">
+    <li>
+      <div class="timeline-head"><strong>데브메이커</strong><span>대표 · 2023.02 – 현재 (3년 10개월)</span></div>
+      <dl>
+        <dt>외주</dt>
+        <dd>텔레그램 TON 네트워크 TIP 표준 스마트 컨트랙트, 지갑 연동 커스텀 코인 전송 사이트, 주한미군 수리 요청 사이트, 당구 커뮤니티, 이민 대행사 CRM 백엔드, 정보보호 해커톤 홍보 사이트, 코인 정보 앱(코인톡), 노후 PHP·Node.js 버전 패치 등</dd>
+        <dt>집필 · 강의</dt>
+        <dd>한빛미디어 『핸즈온 FastAPI』 집필, 인프런 강의 2개 오픈</dd>
+        <dt>멘토 · 과외</dt>
+        <dd>전남대 WE-Meet 블록체인 멘토(2기는 블록체인·AI), Python·JavaScript·C·Linux·Flutter 과외 15명</dd>
+        <dt>창업</dt>
+        <dd>Flutter 앱(색채일기장, 고민들어줌, 정신차려) 개발, 창 부트캠프에서 VC 대상 피칭</dd>
+      </dl>
     </li>
     <li>
-      <b>Front-end</b><br>
-      <ul class="tag">
-        <li>Next.js</li>
-        <li>Nuxt.js</li>
-        <li>Jquery</li>
-      </ul>
-      <p>Next.js로 쇼핑몰 관리 사이트를 개발했습니다. Nuxt.js로 부동산 자동 매물 찾기 서비스를 개발했습니다.</p>
+      <div class="timeline-head"><strong>프로그라운드</strong><span>소프트웨어 엔지니어 · 2022.02 – 2023.01 (1년)</span></div>
+      <dl>
+        <dt>프로그라운드 (운동 기록 앱)</dt>
+        <dd>API 서버 개발, Express → Nest.js 이전, 백오피스, 주간 기술 공유 발표 문화 도입</dd>
+        <dt>슈퍼워크 (블록체인 기반 M2E)</dt>
+        <dd>Nest.js·Next.js·TypeScript 및 AWS Elastic Beanstalk 도입, ERC721 스마트 컨트랙트·민팅·등록 협업, 카카오 클립 토큰/NFT 전송 API, 래플 프론트·서버, NFT 이미지 합성 툴, GitHub Actions 도입, 백오피스</dd>
+        <dt>강의</dt>
+        <dd>2022 고려대 데이터 청년 캠퍼스 플라스크 특강</dd>
+      </dl>
     </li>
     <li>
-      <b>Database</b><br>
-      <ul class="tag">
-        <li>MongoDB</li>
-        <li>MySQL</li>
-        <li>Redis</li>
-      </ul>
-      <p>MongoDB는 primary, secondary, arbiter 서버를 구축해 레플리카를 구축했습니다. MySQL도 레플리카 구축 경험이 있습니다.</p>
+      <div class="timeline-head"><strong>데브메이커</strong><span>소프트웨어 엔지니어 · 2020.10 – 2021.12 (1년 3개월)</span></div>
+      <dl>
+        <dt>개발</dt>
+        <dd>보험 업무 관리 사이트, 거래소 서비스(MRT), 쇼핑몰 관리(리스팅), 부동산 매물 사이트(커스랜드), 마스크 판매·관리 사이트(제이엠파워), 스터디 SNS 앱 서버(가루다)</dd>
+        <dt>집필</dt>
+        <dd>한빛미디어 『처음 배우는 플라스크 웹 프로그래밍』</dd>
+      </dl>
     </li>
     <li>
-      <b>DevOps</b><br>
-      <ul class="tag">
-        <li>AWS</li>
-        <li>Elasticsearch</li>
-        <li>Docker</li>
-        <li>Jenkins</li>
-      </ul>
-      <p>AWS(CF Edge Location, CloudFront, S3)를 활용하여 파일 접근 제어 기능을 구현했습니다. Elasticsearch와 Kibana로 실시간 검색 플랫폼을 구축했습니다. Jenkins와 GitHub를 연동하여 CI/CD를 구축했습니다.</p>
+      <div class="timeline-head"><strong>경력개발</strong><span>소프트웨어 엔지니어 · 2016.07 – 2017.05 (11개월)</span></div>
+      <dl>
+        <dt>타임메카 (시계 도매)</dt>
+        <dd>AS 접수·조회·관리 시스템, 재고 주문 시스템</dd>
+        <dt>피트니 (운동센터 검색 앱)</dt>
+        <dd>위치 기반 운동센터 검색 API, 어드민 사이트</dd>
+        <dt>쓰리클랩스 (아동복 판매)</dt>
+        <dd>API 개발</dd>
+        <dt>셀잇 (중고거래 앱, 카카오 자회사)</dt>
+        <dd>코딩 테스트 합격 후 합류, Ruby on Rails로 셀잇 프라임 개발, 검색 기반 상품 추천 아이디어 제안</dd>
+      </dl>
     </li>
+    <li>
+      <div class="timeline-head"><strong>브릿지모바일</strong><span>소프트웨어 엔지니어 · 2015.07 – 2016.07 (1년 1개월)</span></div>
+      <dl>
+        <dt>브릿지콜 (무료 전화 앱)</dt>
+        <dd>Flask·MongoDB, 250만 유저 글로벌 서버 운영, 주소록 동기화·지역 검색·친구 초대 API, 어드민, 번호 유출 방지 난독화, 서버 모니터링 모듈, SIP 서버 구축</dd>
+        <dt>패스콜 (역발신 무제한 통화 앱)</dt>
+        <dd>웹 크롤링 기반 중고폰 매매 페이지</dd>
+        <dt>브릿지팬 (사진 공유 SNS 앱)</dt>
+        <dd>Flask·Celery·MongoDB·AWS, 게시물·결제·팔로잉·IAB API, API 버전 관리, Celery 파일 업로드, CloudFront·S3 파일 접근 제한</dd>
+      </dl>
+    </li>
+  </ol>
+
+  <h2>기술</h2>
+  <ul class="tags">
+    <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Flask</li><li>FastAPI</li><li>Nest.js</li>
+    <li>Next.js</li><li>Flutter</li><li>Redis</li><li>MySQL</li><li>MongoDB</li><li>AWS</li>
   </ul>
 
-  <h2>학력</h2>
-  <ul>
-    <li>2016 선린인터넷고등학교 졸업</li>
-    <li>2026 학점은행제 시작</li>
-  </ul>
-
-  <h2>수상</h2>
-  <ul>
-    <li>2013 교내 네트워크 구축대회 은상(2위)</li>
-    <li>2014 디지털콘텐츠경진대회 동상(4위)</li>
-    <li>2014 취업진로포트폴리오경진대회 동상(3위)</li>
-  </ul>
-
-  <h2>자격증</h2>
-  <ul>
-    <li>2013 네트워크관리사2급 취득</li>
-    <li>2014 리눅스마스터2급 취득</li>
-    <li>2014 전산회계2급 취득</li>
-    <li>2015 정보처리기능사 취득</li>
-    <li>2022 PCCE 취득</li>
-    <li>2025 COSPro 2급 취득</li>
-  </ul>
-
-  <h2>교육이수</h2>
-  <ul>
-    <li>서버운영 40시간 이수</li>
-    <li>네트워크관리 30시간 이수</li>
-    <li>서버 다중화 및 클라우드 서비스 구축 과정 50시간 이수</li>
-    <li>서버 구축 기초 30시간 이수</li>
-    <li>전산회계 40시간 이수</li>
-    <li>리눅스 서버 구축 및 운용 심화 30시간 이수</li>
-  </ul>
-
-  <h2>경력(8년차)</h2>
-  <p><b>브릿지콜<br>2015.07 ~ 2016.07</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        브릿지콜<br>
-        (무료 전화 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, MongoDB 사용</li>
-          <li>250만 유저 관리, 40대 글로벌 서버 개발</li>
-          <li>브릿지콜 API(주소록 동기화, 지역 검색, 친구 초대) 개발</li>
-          <li>브릿지콜 ADMIN 사이트 개발</li>
-          <li>브릿지콜 개인정보 보호를 위한 AES256 암호화 모듈 개발</li>
-          <li>브릿지콜 번호 유출 방지를 위한 난독화 시스템 개발</li>
-          <li>서버 모니터링 모듈 개발</li>
-          <li>SIP 서버 구축</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        패스콜<br>
-        (역발신 무제한 통화 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask 사용</li>
-          <li>중고 폰 매매 페이지(웹 크롤링) 개발</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        브릿지팬<br>
-        (사진 공유 SNS 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, Celery, MongoDB, AWS 사용</li>
-          <li>브릿지팬 API(게시물 작성, 결제, 팔로잉, IAB) 개발</li>
-          <li>브릿지팬 API 버전별 관리 도입</li>
-          <li>Celery 파일 업로드 시스템 개발</li>
-          <li>AWS(CF Edge Location, CloudFront, S3)를 활용한 파일 접근 제한 시스템 구현</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>외주<br>2016.07 ~ 2016.08</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        타임메카<br>
-        (시계 도매)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, MySQL 사용</li>
-          <li>AS 접수, 조회, 관리 시스템 개발</li>
-          <li>재고 주문 시스템 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>피트니<br>2016.07 ~ 2016.09</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        피트니<br>
-        (운동센터 검색 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, MySQL 사용</li>
-          <li>피트니 API(위치 기반 운동센터 검색) 개발</li>
-          <li>피트니 ADMIN 사이트 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>쓰리클랩스<br>2016.10 ~ 2016.12</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        쓰리클랩스<br>
-        (아동복 판매)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, Express 사용</li>
-          <li>쓰리클랩스 API 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>셀잇<br>2016.12 ~ 2017.05</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        셀잇<br>
-        (중고거래 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Ruby on Rails 사용</li>
-          <li>검색 시 검색 기반 제품 추천 아이디어 제공</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>외주<br>2020.10 ~ 2020.12</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        인스마스터<br>
-        (증권사 보험)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, PostgreSQL 사용</li>
-          <li>캘린더를 활용한 일정관리 개발</li>
-          <li>보험 업무 페이지 개발</li>
-          <li>각종 통계 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>외주<br>2020.12 ~ 2021.06</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        MRT<br>
-        (달러 판매)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, MySQL 사용</li>
-          <li>거래소 관련 서비스 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>책<br>2021.01 ~ 2021.06</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        처음 배우는 플라스크 웹 프로그래밍<br>
-        (파이썬 책 집필)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Flask, AWS 사용</li>
-          <li>플라스크를 활용한 개발, 테스트, 배포, 비동기 관련 책 집필</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>외주<br>2021.05 ~ 2021.06</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        리스팅<br>
-        (쇼핑몰 관리)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Next.js, TypeORM 사용</li>
-          <li>쇼핑몰 관리 사이트 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>외주<br>2021.09 ~ 2021.11</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        제이엠파워<br>
-        (마스크 판매)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>FastAPI, RDS, Elastic Beanstalk 사용</li>
-          <li>마스크 판매/관리자 사이트 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>프로그라운드<br>2022.02 ~ 2023.01</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        프로그라운드<br>
-        (운동 기록 앱)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Nest.js, RDS, Elastic Beanstalk 사용</li>
-          <li>프로그라운드 API 서버 개발</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        슈퍼워크<br>
-        (블록체인 기반 M2E)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>Nest.js, Next.js, TS 도입</li>
-          <li>AWS EB 인프라 도입</li>
-          <li>팔라와 ERC721 민팅 협업</li>
-          <li>클립과 ERC721 등록 협업</li>
-          <li>해치랩스와 ERC721 오딧 협업</li>
-          <li>카카오 클립으로 토큰 및 NFT 전송 API 개발</li>
-          <li>래플 프론트/서버 모두 구현</li>
-          <li>GitHub Action 도입</li>
-          <li>타 부서에 MYSQL 사용법 인수인계</li>
-          <li>슈퍼워크 API 서버 개발</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p><b>강의<br>2022.07 ~ 2022.07</b></p>
-  <table class="about-table">
-    <tr>
-      <td>
-        2022 고려대 데이터 청년 캠퍼스 특강 강사<br>
-        (강의)
-      </td>
-      <td>
-        <ul class="about-desc">
-          <li>2022 고려대 데이터 청년 캠퍼스에서 플라스크 특강을 진행했습니다.</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+  <div class="about-cols">
+    <section>
+      <h2>학력</h2>
+      <ul>
+        <li>선린인터넷고등학교 정보통신과 <small>2013.03 – 2016.02 졸업</small></li>
+        <li>학점은행제 컴퓨터공학 <small>2026.09 – 재학 중</small></li>
+      </ul>
+    </section>
+    <section>
+      <h2>자격증</h2>
+      <ul>
+        <li>COS Pro 2급</li>
+        <li>PCCE (프로그래머스)</li>
+        <li>정보처리기능사</li>
+        <li>리눅스마스터 2급</li>
+        <li>네트워크관리사 2급</li>
+        <li>전산회계 2급</li>
+      </ul>
+    </section>
+    <section>
+      <h2>수상</h2>
+      <ul>
+        <li>교내 네트워크 구축대회 은상 <small>2013</small></li>
+        <li>디지털콘텐츠경진대회 동상 <small>2014</small></li>
+        <li>취업진로포트폴리오경진대회 동상 <small>2014</small></li>
+      </ul>
+    </section>
+  </div>
 </div>
