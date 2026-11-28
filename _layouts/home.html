@@ -1,20 +1,32 @@
 ---
 layout: default
 ---
-{%- if paginator.page == 1 -%}
-<section class="hero container">
-  <img class="hero-avatar" src="{{ site.logo | relative_url }}" alt="{{ site.author }} 프로필" width="88" height="88">
-  <div>
-    <h1 class="hero-title">{{ site.title }}</h1>
-    <p class="hero-desc">{{ site.description }}</p>
-    <p class="hero-sub">직장인, 프리랜서로 일하며 배운 것들을 기록합니다.</p>
-  </div>
-</section>
-{%- endif -%}
-<section class="container narrow">
-  <div class="list-head">
-    <h2 class="section-title">{% if paginator.page == 1 %}최신 글{% else %}글 목록 · {{ paginator.page }} / {{ paginator.total_pages }}{% endif %}</h2>
-    <span class="count">총 {{ site.posts.size }}개</span>
-  </div>
-  {{ content }}
-</section>
+<div class="container narrow stack">
+  {%- if paginator.page == 1 %}
+  <section class="window about-mac">
+    {% include window-bar.html title="이 블로그에 관하여" %}
+    <div class="about-mac-body">
+      <img class="about-mac-avatar" src="{{ site.logo | relative_url }}" alt="{{ site.author }} 프로필" width="128" height="128">
+      <div class="about-mac-info">
+        <h1>{{ site.title }}</h1>
+        <p class="about-mac-ver">{{ site.description }}</p>
+        <dl class="specs">
+          <div><dt>개발자</dt><dd>윤정현 ({{ site.author }})</dd></div>
+          <div><dt>주력</dt><dd>Python · FastAPI · Nest.js</dd></div>
+          <div><dt>경력</dt><dd>8년+ · 개발자 · 저자 · 강사</dd></div>
+          <div><dt>저장 공간</dt><dd>글 {{ site.posts.size }}개</dd></div>
+        </dl>
+        <p class="about-mac-sub">직장인, 프리랜서로 일하며 배운 것들을 기록합니다.</p>
+        <a class="mac-btn" href="{{ '/about/' | relative_url }}">자세한 정보…</a>
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="window">
+    {%- capture list_title -%}{% if paginator.page == 1 %}최신 글{% else %}글 목록 — {{ paginator.page }} / {{ paginator.total_pages }}{% endif %}{%- endcapture -%}
+    {%- capture list_right -%}{{ site.posts.size }}개 항목{%- endcapture -%}
+    {% include window-bar.html title=list_title right=list_right %}
+    {{ content }}
+  </section>
+</div>

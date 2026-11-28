@@ -1,48 +1,71 @@
 (function () {
   'use strict';
 
-  /* ---------- 코드 블록: 언어 라벨 + 복사 버튼 ---------- */
+  /* ---------- 메뉴 막대 시계 ---------- */
+  var clock = document.querySelector('[data-clock]');
+  if (clock && window.Intl) {
+    var fmtFull = new Intl.DateTimeFormat('ko-KR', { month: 'long', day: 'numeric', weekday: 'short', hour: 'numeric', minute: '2-digit' });
+    var tick = function () {
+      var now = new Date();
+      clock.textContent = fmtFull.format(now);
+      clock.setAttribute('datetime', now.toISOString());
+    };
+    tick();
+    setInterval(tick, 15000);
+  }
+
+  /* ---------- 코드 블록: 터미널 창 제목 막대 + 복사 버튼 ---------- */
   document.querySelectorAll('.prose div.highlighter-rouge').forEach(function (block) {
     var m = block.className.match(/language-([\w+-]+)/);
-    if (m && m[1] !== 'plaintext') {
-      var label = document.createElement('span');
-      label.className = 'code-lang';
-      label.textContent = m[1];
-      block.appendChild(label);
-    }
-    if (!navigator.clipboard) return;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'copy-btn';
-    btn.textContent = '복사';
-    btn.addEventListener('click', function () {
-      var code = block.querySelector('pre code') || block.querySelector('pre');
-      navigator.clipboard.writeText(code.innerText).then(function () {
-        btn.textContent = '복사됨!';
-        setTimeout(function () { btn.textContent = '복사'; }, 1500);
+    var lang = m && m[1] !== 'plaintext' ? m[1] : '';
+    var bar = document.createElement('div');
+    bar.className = 'code-bar';
+    bar.innerHTML = '<span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="code-lang"></span>';
+    bar.querySelector('.code-lang').textContent = lang || 'terminal';
+    if (navigator.clipboard) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.textContent = '복사';
+      btn.addEventListener('click', function () {
+        var code = block.querySelector('pre code') || block.querySelector('pre');
+        navigator.clipboard.writeText(code.innerText).then(function () {
+          btn.textContent = '복사됨';
+          setTimeout(function () { btn.textContent = '복사'; }, 1500);
+        });
       });
-    });
-    block.appendChild(btn);
+      bar.appendChild(btn);
+    }
+    block.insertBefore(bar, block.firstChild);
   });
 
   /* ---------- 스크롤: 읽기 진행률 + 맨 위로 ---------- */
   var bar = document.querySelector('.reading-progress span');
-  var toTop = document.querySelector('[data-to-top]');
+  var dock = document.querySelector('.dock');
+  var lastY = window.scrollY;
   var ticking = false;
   function onScroll() {
     var y = window.scrollY;
-    if (bar) {
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + '%';
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + '%';
+
+    // Dock: 내릴 때 숨김, 올릴 때·맨 위·맨 아래에서 표시
+    if (dock) {
+      var dy = y - lastY;
+      var atEdge = y < 80 || y >= max - 40;
+      if (atEdge || dy < -4 || dock.contains(document.activeElement)) dock.classList.remove('is-hidden');
+      else if (dy > 4) dock.classList.add('is-hidden');
+      if (Math.abs(dy) > 4 || atEdge) lastY = y;
     }
-    if (toTop) toTop.classList.toggle('show', y > 600);
     ticking = false;
   }
   window.addEventListener('scroll', function () {
     if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
   onScroll();
-  if (toTop) toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  document.querySelectorAll('[data-to-top]').forEach(function (b) {
+    b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  });
 
   /* ---------- 검색 ---------- */
   var modal = document.getElementById('search');

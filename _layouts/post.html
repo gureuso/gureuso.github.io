@@ -4,46 +4,51 @@ layout: default
 {%- assign words = content | strip_html | size -%}
 {%- assign minutes = words | divided_by: 500 | plus: 1 -%}
 <div class="reading-progress" aria-hidden="true"><span></span></div>
-<article class="container narrow post">
-  <header class="post-head">
-    <div class="post-meta">
-      {%- for c in page.categories %}<span class="post-category">{{ c }}</span>{% endfor %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y년 %-m월 %-d일' }}</time>
-      <span>·</span>
-      <span>{{ minutes }}분 읽기</span>
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {%- if page.author %}
-    <div class="post-author">
-      <img src="{{ site.logo | relative_url }}" alt="" width="28" height="28">
-      <span>{{ page.author }}</span>
-    </div>
-    {%- endif %}
-  </header>
+<div class="container narrow stack">
+  <article class="window post">
+    {%- capture file_title -%}{{ page.slug }}.md{%- endcapture -%}
+    {%- capture read_time -%}{{ minutes }}분 읽기{%- endcapture -%}
+    {% include window-bar.html title=file_title right=read_time %}
+    <div class="win-body">
+      <header class="post-head">
+        <div class="post-meta">
+          {%- for c in page.categories %}<span class="post-category" data-cat="{{ c }}">{{ c }}</span>{% endfor %}
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y년 %-m월 %-d일' }}</time>
+        </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {%- if page.author %}
+        <div class="post-author">
+          <img src="{{ site.logo | relative_url }}" alt="" width="28" height="28">
+          <span>{{ page.author }}</span>
+        </div>
+        {%- endif %}
+      </header>
 
-  <div class="prose">
-    {{ content }}
-  </div>
+      <div class="prose">
+        {{ content }}
+      </div>
 
-  {%- if page.tags.size > 0 %}
-  <ul class="tags post-tags">
-    {%- for tag in page.tags %}<li>#{{ tag }}</li>{% endfor %}
-  </ul>
-  {%- endif %}
+      {%- if page.tags.size > 0 %}
+      <ul class="tags post-tags">
+        {%- for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+  </article>
 
   <nav class="post-nav" aria-label="이전/다음 글">
     {%- if page.previous.url %}
     <a class="post-nav-item prev" href="{{ page.previous.url | relative_url }}">
-      <span>이전 글</span><strong>{{ page.previous.title }}</strong>
+      <span>← 이전 글</span><strong>{{ page.previous.title }}</strong>
     </a>
     {%- else %}<span></span>{% endif %}
     {%- if page.next.url %}
     <a class="post-nav-item next" href="{{ page.next.url | relative_url }}">
-      <span>다음 글</span><strong>{{ page.next.title }}</strong>
+      <span>다음 글 →</span><strong>{{ page.next.title }}</strong>
     </a>
     {%- endif %}
   </nav>
 
   {% include related_posts.html %}
   {%- if page.comments != false %}{% include comments.html %}{% endif %}
-</article>
+</div>

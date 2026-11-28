@@ -1,15 +1,17 @@
-<header class="site-header">
-  <div class="container header-inner">
+<header class="menubar">
+  <div class="menubar-inner">
     <a class="brand" href="{{ '/' | relative_url }}">
-      <img src="{{ site.logo | relative_url }}" alt="" width="32" height="32">
-      <span>{{ site.title }}</span>
+      <img src="{{ site.logo | relative_url }}" alt="" width="22" height="22">
+      <strong>{{ site.title }}</strong>
     </a>
-    <nav class="nav" aria-label="주 메뉴">
+    <nav class="menu" aria-label="주 메뉴">
       <a href="{{ '/' | relative_url }}"{% if page.layout == 'home' or page.layout == 'post' %} aria-current="page"{% endif %}>글</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>소개</a>
-      <span class="nav-sep" aria-hidden="true"></span>
-      <button type="button" class="icon-btn" data-search-open aria-label="검색 (단축키 /)">{% include icon.html name='search' %}</button>
-      <a class="icon-btn" href="https://github.com/{{ site.github.username }}" aria-label="GitHub" rel="noopener">{% include icon.html name='github' %}</a>
     </nav>
+    <div class="menubar-right">
+      <button type="button" class="menu-icon" data-search-open aria-label="검색 (⌘K)">{% include icon.html name='search' %}</button>
+      <a class="menu-icon" href="https://github.com/{{ site.github.username }}" aria-label="GitHub" target="_blank" rel="noopener">{% include icon.html name='github' %}</a>
+      <time class="clock" data-clock></time>
+    </div>
   </div>
 </header>

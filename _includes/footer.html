@@ -1,11 +1,13 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <span>© <span data-year>{{ site.time | date: '%Y' }}</span> {{ site.author }}. All rights reserved.</span>
-    <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
-    <span class="footer-links">
-      <a href="{{ '/rss/' | relative_url }}" aria-label="RSS">{% include icon.html name='rss' %}</a>
-      <a href="https://github.com/{{ site.github.username }}" aria-label="GitHub" rel="noopener">{% include icon.html name='github' %}</a>
-    </span>
-  </div>
+  <nav class="dock" aria-label="바로가기">
+    <a class="dock-item" href="{{ '/' | relative_url }}" data-label="홈"><span class="dock-icon di-home">{% include icon.html name='home' %}</span></a>
+    <a class="dock-item" href="{{ '/about/' | relative_url }}" data-label="소개"><span class="dock-icon di-about"><img src="{{ site.logo | relative_url }}" alt="" width="48" height="48"></span></a>
+    <button type="button" class="dock-item" data-search-open data-label="검색"><span class="dock-icon di-search">{% include icon.html name='search' %}</span></button>
+    <a class="dock-item" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener" data-label="GitHub"><span class="dock-icon di-github">{% include icon.html name='github' %}</span></a>
+    <a class="dock-item" href="{{ '/rss/' | relative_url }}" data-label="RSS"><span class="dock-icon di-rss">{% include icon.html name='rss' %}</span></a>
+    <span class="dock-sep" aria-hidden="true"></span>
+    <button type="button" class="dock-item" data-to-top data-label="맨 위로"><span class="dock-icon di-top">{% include icon.html name='arrow-up' %}</span></button>
+  </nav>
+  <p class="copyright">© <span data-year>{{ site.time | date: '%Y' }}</span> {{ site.author }}. All rights reserved.</p>
+  <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
 </footer>
-<button type="button" class="to-top" data-to-top aria-label="맨 위로">{% include icon.html name='arrow-up' %}</button>

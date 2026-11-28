@@ -3,13 +3,13 @@
   <a class="post-card-link" href="{{ p.url | relative_url }}">
     <div class="post-card-body">
       <div class="post-meta">
-        {%- if p.categories.size > 0 %}<span class="post-category">{{ p.categories | first }}</span>{% endif %}
+        {%- if p.categories.size > 0 %}<span class="post-category" data-cat="{{ p.categories | first }}">{{ p.categories | first }}</span>{% endif %}
         <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: '%Y.%m.%d' }}</time>
       </div>
       <h2 class="post-card-title">{{ p.title }}</h2>
       <p class="post-card-excerpt">{{ p.excerpt | strip_html | normalize_whitespace | truncate: 140 }}</p>
       {%- if p.tags.size > 0 %}
-      <ul class="tags">{% for tag in p.tags limit: 4 %}<li>#{{ tag }}</li>{% endfor %}</ul>
+      <ul class="tags">{% for tag in p.tags limit: 4 %}<li>{{ tag }}</li>{% endfor %}</ul>
       {%- endif %}
     </div>
     {%- if p.thumbnail %}
