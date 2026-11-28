@@ -48,11 +48,11 @@ Flask는 더 사용하기 쉽게 만든 [gureuso/flask](https://github.com/gureu
 
 `/v1/signup` 몇세 이상 관람가가 있어 회원가입 폼에 나이도 추가했다.
 
-![create-the-cinema-homepage-part-1-03](/assets/images/create-the-cinema-homepage-part-1/03.gif)
+![create-the-cinema-homepage-part-1-03](/assets/images/create-the-cinema-homepage-part-1/03.webp)
 
 `/v1/movies` 영화를 선택할 수 있게 해준다. `movies`는 영화 정보를 가지고 있는 테이블로 title, director, poster_url 등을 가지고 있다.
 
-![create-the-cinema-homepage-part-1-04](/assets/images/create-the-cinema-homepage-part-1/04.png)
+![create-the-cinema-homepage-part-1-04](/assets/images/create-the-cinema-homepage-part-1/04.webp)
 
 `/v1/cinemas` 영화를 선택했으면 영화관을 선택할 차례이다. 해당 페이지에서는 영화관 리스트를 보여준다. `cinemas`는 title, image_url, address 등을 가지고 있다.
 
@@ -61,7 +61,7 @@ Flask는 더 사용하기 쉽게 만든 [gureuso/flask](https://github.com/gureu
 `/v1/showtimes` 요일별 상영시간을 볼수 있고 남은 좌석을 확인할 수 있다.
 `showtimes` 같은 경우에는 one to many 구조를 지향했고, movie_id와 cinema_id를 가지고 있게 함으로서 영화 예매 순서를 DB에 최대한 반영해봤다.
 
-![create-the-cinema-homepage-part-1-06](/assets/images/create-the-cinema-homepage-part-1/06.gif)
+![create-the-cinema-homepage-part-1-06](/assets/images/create-the-cinema-homepage-part-1/06.webp)
 
 `/v1/theater/<theater_id>/showtime/<showtime_id>` 좌석예매 같은 경우에는 상영시간 동안 극장 하나에 해당 좌석은 하나만 있어야 한다는 특징을 반영했다. `theater_tickets`에는 theater_id와 showtime_id를 가지게 된다. 덕분에 중복방지 코드를 작성하기가 한결 편해졌다.
 

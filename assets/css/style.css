@@ -199,7 +199,9 @@ a.page-step:hover { background: rgb(255 255 255 / 16%); }
 /* ---------- 글 ---------- */
 .reading-progress { position: fixed; top: var(--menubar-h); left: 0; right: 0; height: 2px; z-index: 30; pointer-events: none; }
 .reading-progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 0 8px rgb(10 132 255 / 60%); }
-.window.post, .window.page { background: rgb(28 28 32 / 92%); }
+/* 긴 본문 창은 블러 없이 불투명 배경 — 큰 이미지 위 backdrop-filter 재합성으로 인한 깜빡임 방지 */
+.window.post, .window.page { background: var(--win-solid); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.prose img { backface-visibility: hidden; }
 .post-head { padding: 36px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
 .post-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 38px); line-height: 1.28; letter-spacing: -.025em; margin: 12px 0 18px; font-weight: 700; }
 .post-author { display: flex; align-items: center; gap: 10px; color: var(--text-2); font-size: 14px; font-weight: 500; }

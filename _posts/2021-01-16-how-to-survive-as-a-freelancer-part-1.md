@@ -42,11 +42,11 @@ comments: true
 
 ## 3. 실적
 
-![freelancer-part-1-03](/assets/images/how-to-survive-as-a-freelancer-part-1/03.png)
+![freelancer-part-1-03](/assets/images/how-to-survive-as-a-freelancer-part-1/03.webp)
 
 ![freelancer-part-1-04](/assets/images/how-to-survive-as-a-freelancer-part-1/04.png)
 
-![freelancer-part-1-05](/assets/images/how-to-survive-as-a-freelancer-part-1/05.png)
+![freelancer-part-1-05](/assets/images/how-to-survive-as-a-freelancer-part-1/05.webp)
 
 잘나가는 개발자 만큼은 아니지만 프리랜서를 했다고 말할 정도로 바쁘게 살고 있는 것 같다. 처음 니즈와 부합하게 폼을 이용한 설문조사 사이트, 증권사 보험 관리자 사이트, 거래소 사이트 등을 수주했다.
 고객의 니즈를 파악 후 실행에 옮겨 성과까지 낸 케이스라 굉장히 스스로 만족스러웠고 프리랜서의 삶에 대해 긍정적인 시각을 가지게 해주었다.
